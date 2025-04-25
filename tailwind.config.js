@@ -7,7 +7,11 @@ module.exports = {
     './node_modules/@heroui/theme/dist/components/(autocomplete|form|input|navbar|popover|scroll-shadow|skeleton|spacer|button|ripple|spinner|listbox|divider).js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
+    },
   },
   darkMode: 'class',
   plugins: [heroui()],

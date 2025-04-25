@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { cn } from "@/components/lib/utils";
+import { cn } from '../../components/lib/utils'
 import {
   AnimatePresence,
   HTMLMotionProps,
   motion,
   useMotionValue,
-} from "motion/react";
-import { useEffect, useRef, useState } from "react";
+} from 'motion/react'
+import { useEffect, useRef, useState } from 'react'
 
-interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
+interface PointerProps extends Omit<HTMLMotionProps<'div'>, 'ref'> {}
 
 /**
  * A custom pointer component that displays an animated cursor.
@@ -25,47 +25,47 @@ export function Pointer({
   children,
   ...props
 }: PointerProps): JSX.Element {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const [isActive, setIsActive] = useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const [isActive, setIsActive] = useState<boolean>(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (typeof window !== "undefined" && containerRef.current) {
+    if (typeof window !== 'undefined' && containerRef.current) {
       // Get the parent element directly from the ref
-      const parentElement = containerRef.current.parentElement;
+      const parentElement = containerRef.current.parentElement
 
       if (parentElement) {
         // Add cursor-none to parent
-        parentElement.style.cursor = "none";
+        parentElement.style.cursor = 'none'
 
         // Add event listeners to parent
         const handleMouseMove = (e: MouseEvent) => {
-          x.set(e.clientX);
-          y.set(e.clientY);
-        };
+          x.set(e.clientX)
+          y.set(e.clientY)
+        }
 
         const handleMouseEnter = () => {
-          setIsActive(true);
-        };
+          setIsActive(true)
+        }
 
         const handleMouseLeave = () => {
-          setIsActive(false);
-        };
+          setIsActive(false)
+        }
 
-        parentElement.addEventListener("mousemove", handleMouseMove);
-        parentElement.addEventListener("mouseenter", handleMouseEnter);
-        parentElement.addEventListener("mouseleave", handleMouseLeave);
+        parentElement.addEventListener('mousemove', handleMouseMove)
+        parentElement.addEventListener('mouseenter', handleMouseEnter)
+        parentElement.addEventListener('mouseleave', handleMouseLeave)
 
         return () => {
-          parentElement.style.cursor = "";
-          parentElement.removeEventListener("mousemove", handleMouseMove);
-          parentElement.removeEventListener("mouseenter", handleMouseEnter);
-          parentElement.removeEventListener("mouseleave", handleMouseLeave);
-        };
+          parentElement.style.cursor = ''
+          parentElement.removeEventListener('mousemove', handleMouseMove)
+          parentElement.removeEventListener('mouseenter', handleMouseEnter)
+          parentElement.removeEventListener('mouseleave', handleMouseLeave)
+        }
       }
     }
-  }, [x, y]);
+  }, [x, y])
 
   return (
     <>
@@ -103,7 +103,7 @@ export function Pointer({
                 width="24"
                 xmlns="http://www.w3.org/2000/svg"
                 className={cn(
-                  "rotate-[-70deg] stroke-white text-black",
+                  'rotate-[-70deg] stroke-white text-black',
                   className,
                 )}
               >
@@ -114,5 +114,5 @@ export function Pointer({
         )}
       </AnimatePresence>
     </>
-  );
+  )
 }
