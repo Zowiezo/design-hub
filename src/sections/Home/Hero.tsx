@@ -2,9 +2,7 @@
 
 import { Marquee } from '../../components/magicui/marquee'
 import { AuroraText } from '../../components/magicui/aurora-text'
-// import { motion } from 'framer-motion'
-import { Particles } from '../../components/magicui/particles'
-// import { HyperText } from '../../components/magicui/hyper-text'
+// import { Particles } from '../../components/magicui/particles'
 
 const words = [
   '|| Development',
@@ -19,13 +17,13 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10">
       {/* Particles */}
-      <Particles
+      {/* <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
         color={'#37b7ff'}
         quantity={300}
         ease={80}
         size={0.75}
-      />
+      /> */}
 
       {/* Main Heading Effect */}
       <div className="z-10 text-center mt-[5%]">
@@ -38,7 +36,7 @@ const Hero = () => {
       {/* Marquee Rows */}
       <div className="z-10 space-y-[3%]">
         <Marquee
-          className="opacity-20 text-[calc(1.75rem+2%)] font-light text-white lowercase"
+          className="opacity-6 text-[calc(1.75rem+2%)] font-light text-white lowercase"
           reverse
           pauseOnHover
         >
@@ -53,7 +51,7 @@ const Hero = () => {
         </Marquee>
 
         <Marquee
-          className="opacity-20 text-[calc(1.75rem+2%)] font-light text-white lowercase"
+          className="opacity-6 text-[calc(1.75rem+2%)] font-light text-white lowercase"
           reverse
           pauseOnHover
         >
