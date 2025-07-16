@@ -8,7 +8,7 @@ import AboutDH2 from '../../assets/images/htmlWeb.png'
 
 const About = () => {
   return (
-    <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[10rem]">
+    <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[7rem]">
       {/* Particles */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
@@ -18,11 +18,11 @@ const About = () => {
         size={0.05}
       />
       {/* Header */}
-      <div className="max-w-6xl mx-auto mb-16 text-center">
-        <p className="text-[calc(3.5rem*1)] md:text-6xl  mb-4 tracking-tight">
+      <div className="max-w-6xl mx-auto text-center">
+        <p className="text-[calc(3.5rem*1)] md:text-6xl tracking-tight">
           Who We Are
         </p>
-        <p className="text-[calc(1.25rem*1.15)] text-gray-400 max-w-3xl mx-auto">
+        <p className="text-[calc(1.2rem*1)] text-gray-400 max-w-3xl mx-auto">
           <AuroraText>
             The Design Hub Management is a creative tech studio crafting
             unforgettable digital <br /> experiences through intentional design,
@@ -41,7 +41,7 @@ const About = () => {
       </div>
 
       {/* About Description */}
-      <div className="max-w-4xl mx-auto text-[calc(1.25rem*1)] text-gray-300 space-y-6 max-w-3xl mx-auto ml-[15rem] mt-[-15rem]">
+      <div className="max-w-4xl mx-auto text-[calc(1.2rem*1)] text-gray-300 space-y-6 max-w-3xl mx-auto ml-[15rem] mt-[-15rem]">
         <p>
           We specialize in{' '}
           <AnimatedGradientText>
@@ -83,18 +83,18 @@ const About = () => {
         <img
           src={AboutDH2}
           alt="Social Media Mail"
-          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float mt-[5rem]"
+          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
         />
       </div>
 
       {/* Mission & Vision */}
-      <div className="text-[calc(1.5rem*1)] md:text-6xl  mt-[-15rem] tracking-tight">
+      <div className="md:text-6xl  mt-[-13rem] tracking-tight">
         {/* Mission */}
         <div>
-          <p className="text-[calc(3.5rem*1)] md:text-6xl  mb-4 tracking-tight text-center">
+          <p className="text-[calc(2.5rem*1)] md:text-6xl  mb-4 tracking-tight text-center">
             <AnimatedGradientText>Our Mission</AnimatedGradientText>
           </p>
-          <p className="text-lg text-gray-300 ml-[35rem] mt-[-3rem]">
+          <p className="text-[calc(1.2rem*1)] text-gray-300 ml-[35rem] mt-[-3rem]">
             To revolutionize digital experiences by blending <br /> design and
             innovation to create impactful, user-centric <br /> solutions that
             empower businesses and individuals to <br />
@@ -104,10 +104,10 @@ const About = () => {
 
         {/* Vision */}
         <div>
-          <p className="text-[calc(3.5rem*1)] md:text-6xl  mb-4 tracking-tight text-center">
+          <p className="text-[calc(2.5rem*1)] md:text-6xl tracking-tight text-center">
             <AnimatedGradientText>Our Vision</AnimatedGradientText>
           </p>
-          <p className="text-lg text-gray-300 ml-[15rem] mt-[-3rem] mb-[4rem]">
+          <p className="text-[calc(1.2rem*1)] text-gray-300 ml-[15rem] mt-[-3rem] mb-[3rem]">
             To become a leading global agency where creativity meets
             technology—driving <br />
             design-forward solutions that shape the future of digital
