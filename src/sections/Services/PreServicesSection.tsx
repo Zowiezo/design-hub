@@ -111,13 +111,13 @@ const PreServicesSection = () => {
       </div>
 
       <div className="mt-[16rem] flex justify-center">
-        {/* <Link to="/services"> */}
-        <CoolMode>
-          <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
-            Explore Our Services
-          </RainbowButton>
-        </CoolMode>
-        {/* </Link> */}
+        <Link to="/services">
+          <CoolMode>
+            <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
+              Explore Our Services
+            </RainbowButton>
+          </CoolMode>
+        </Link>
       </div>
     </section>
   )

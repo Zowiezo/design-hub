@@ -16,19 +16,19 @@ const words = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4">
+    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4 mt-[2%]">
       {/* Logo + Text */}
-      <div className="flex flex-col items-center gap-3 max-w-[100vw] mt-[2%]">
+      <div className="flex flex-col items-center gap-3 max-w-[100vw] mt-[5rem]">
         <img
           src={Logo}
           alt="The Design Hub Logo"
           className="h-[10rem] w-[10rem] sm:h-[20rem] sm:w-[20rem] md:h-[20rem] md:w-[20rem] object-contain"
         />
         <div className="text-center leading-tight break-words">
-          <p className="font-light text-[#37b7ff] mt-[-12%] text-[calc(2rem*1)] md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)]">
+          <p className="font-light text-[#37b7ff] mt-[-11%] text-[calc(2rem*1)] md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)]">
             THE DESIGN HUB
           </p>
-          <p className="font-light text-[#b7e3fe] mt-[-11%] text-[calc(2rem*0.5)] md:text-[calc(4rem*0.65)] lg:text-[calc(6rem*0.65)] xl:text-[calc(7rem*0.65)]">
+          <p className="font-light text-[#b7e3fe] mt-[-10%] text-[calc(2rem*0.5)] md:text-[calc(4rem*0.65)] lg:text-[calc(6rem*0.65)] xl:text-[calc(7rem*0.65)]">
             MANAGEMENT
           </p>
         </div>
@@ -44,7 +44,7 @@ const Hero = () => {
       />
 
       {/* Main Heading */}
-      <div className="z-10 text-center mt-[1%] max-w-[95vw] break-words px-2">
+      <div className="z-10 text-center mt-[-3rem] max-w-[95vw] break-words px-2">
         <p className="text-[calc(3rem*1)] tracking-tighter md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight">
           Where <AuroraText> DESIGN </AuroraText> Meets{' '}
           <AuroraText> INNOVATION </AuroraText>
@@ -79,7 +79,7 @@ const Hero = () => {
 
       {/* Subheading */}
       <div className="z-10 text-center px-4 max-w-[90vw]">
-        <p className="text-[calc(1.25rem*1.15)] tracking-tighter md:text-[calc(2.25rem*1.15)] lg:text-[calc(4.25rem*1.15)] xl:text-[calc(5.25rem*1.15)] uppercase leading-snug">
+        <p className="text-[calc(1.25rem*1.15)] tracking-tighter md:text-[calc(2.25rem*1.15)] lg:text-[calc(4.25rem*1.15)] xl:text-[calc(5.25rem*1.15)] uppercase leading-snug mb-[5rem]">
           <AuroraText>Design </AuroraText> is our language.{' '}
           <AuroraText>Innovation</AuroraText> is our accent.
         </p>

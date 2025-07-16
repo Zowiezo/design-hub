@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
@@ -28,8 +30,6 @@ const Home: React.FC = () => {
             Driven by{' '}
             <AnimatedGradientText
               speed={2}
-              // colorFrom="#4ade80"
-              // colorTo="#06b6d4"
               className="text-4xl font-semibold tracking-tight"
             >
               DESIGN.
@@ -78,11 +78,13 @@ const Home: React.FC = () => {
 
           {/* CTA */}
           <div className="pt-[5%] flex justify-center">
-            <CoolMode>
-              <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
-                Discover Our Story
-              </RainbowButton>
-            </CoolMode>
+            <Link to="/about">
+              <CoolMode>
+                <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
+                  Discover Our Story
+                </RainbowButton>
+              </CoolMode>
+            </Link>
           </div>
         </div>
       </section>

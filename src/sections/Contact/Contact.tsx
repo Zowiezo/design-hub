@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
         <div className="lg:w-1/2 space-y-6 ml-[10rem]">
           {/* Email Info */}
           <div>
-            {/* 🚀 web with Overlap */}
+            {/* 🚀 Email Icon*/}
             <div className="flex items-start gap-4">
               <img
                 src={Email}
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
 
           {/* Phone Info */}
           <div className="text-[calc(1.15rem*1)] font-semibold">
-            {/* 🚀 web with Overlap */}
+            {/* 🚀 Phone Icon*/}
             <div className="flex items-start gap-4 mt-8">
               <img
                 src={Phone}
@@ -84,17 +84,18 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* 🚀 web with Overlap */}
-        <div className="relative flex ml-[40rem] mt-[-23rem] h-[14rem]">
+        {/* 🚀 Social Media Mail with Overlap */}
+        <div className="relative flex ml-[40rem] mt-[-20rem] h-[14rem]">
           <img
             src={Mail}
             alt="Social Media Mail"
-            className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
+            className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
           />
         </div>
 
         {/* Right Side – Form */}
-        <div className="lg:w-1/2 bg-[#111111] p-8 rounded-xl shadow-xl ml-[45rem] mt-[-15rem] w-full max-w-[35rem]">
+
+        <div className="lg:w-1/2 bg-[#111111] p-8 rounded-xl shadow-xl ml-[45rem] mt-[-19rem] w-full max-w-[35rem]">
           <p className="text-[calc(1.15rem*1.5)] mb-6 ml-[2.5rem]">
             Have questions or need assistance? <br />
             <span className="text-[#b7e3fe] ml-[7.5rem]">
@@ -102,7 +103,11 @@ const Contact: React.FC = () => {
             </span>
           </p>
 
-          <form className="space-y-6 ml-[8rem] mt-[-1rem]">
+          <form
+            action="https://formspree.io/f/mpwlzbzl"
+            method="POST"
+            className="space-y-6 ml-[8rem] mt-[-1rem]"
+          >
             {/* Row 1: Name + Surname */}
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
@@ -111,7 +116,9 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
+                  required
                   className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
                 />
               </div>
@@ -121,7 +128,9 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="text"
+                  name="surname"
                   placeholder="Enter your surname"
+                  required
                   className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
                 />
               </div>
@@ -135,6 +144,7 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="+27..."
                   className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
                 />
@@ -145,7 +155,9 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email@example.com"
+                  required
                   className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
                 />
               </div>
@@ -156,13 +168,17 @@ const Contact: React.FC = () => {
               <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
                 Services
               </label>
-              <select className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]">
+              <select
+                name="service"
+                required
+                className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+              >
                 <option value="">Select a service</option>
-                <option value="ux">UX/UI Design</option>
-                <option value="branding">Branding</option>
-                <option value="web">Web Development</option>
-                <option value="consulting">Consulting</option>
-                <option value="other">Other</option>
+                <option value="UX/UI Design">UX/UI Design</option>
+                <option value="Branding">Branding</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
@@ -172,8 +188,10 @@ const Contact: React.FC = () => {
                 Message
               </label>
               <textarea
+                name="message"
                 rows={4}
                 placeholder="Tell us more..."
+                required
                 className="w-full max-w-[20rem] h-[2.75rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
               ></textarea>
             </div>
@@ -190,7 +208,7 @@ const Contact: React.FC = () => {
           </form>
         </div>
         {/* Social Media Icons */}
-        <div className="flex items-center gap-6 mt-[-6rem] ml-[20rem]">
+        <div className="flex items-center gap-[6rem] mt-[-10rem] mb-[8rem] ml-[10rem]">
           <a
             href="https://www.facebook.com/TheDesignHubMgt"
             target="_blank"

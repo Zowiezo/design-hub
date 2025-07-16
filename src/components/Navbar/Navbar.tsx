@@ -2,62 +2,66 @@
 import React from 'react'
 import {
   Navbar as HeroNavbar,
-  NavbarBrand,
   NavbarContent,
   NavbarItem,
   Link,
+  NavbarBrand,
 } from '@heroui/react'
-import Logo from '../../assets/images/Design.svg'
+import Logo from '../../assets/images/DH.png'
 
 const Navbar = () => {
   return (
-    <HeroNavbar className="py-4">
-      <NavbarBrand className="flex items-center gap-3">
-        <img
-          src={Logo}
-          alt="The Design Hub Logo"
-          className="h-[8rem] w-[8rem] object-contain"
-        />
-        <p className="font-light tracking-widest text-sm text-inherit">
-          THE DESIGN HUB
-        </p>
+    <HeroNavbar
+      className="fixed top-0 w-full z-50 bg-[#000] py-6 justify-center"
+      isBordered
+    >
+      <NavbarBrand>
+        <Link href="/">
+          <img
+            src={Logo}
+            alt="The Design Hub Logo"
+            className="h-[5rem] w-[5rem] sm:h-[20rem] sm:w-[20rem] md:h-[20rem] md:w-[20rem] object-contain ml-[5rem] mt-[1.5rem]"
+          />{' '}
+        </Link>{' '}
       </NavbarBrand>
-
-      <NavbarContent className="flex gap-8  sm:flex !m-0" justify="center">
-        <NavbarItem className="list-none">
+      {/* Centered Nav Links */}
+      <NavbarContent
+        className="flex justify-center items-center gap-[7rem] mr-[13rem] uppercase text-[calc(1.5rem*1)] tracking-widest relative z-10"
+        justify="center"
+      >
+        <NavbarItem>
           <Link
-            className="text-xs  text-gray-800 hover:text-primary transition"
-            href="#"
+            href="/about"
+            className="hover:text-[#37b7ff] text-[#fff] transition-colors duration-200"
           >
-            ABOUT
+            About Us
           </Link>
         </NavbarItem>
 
-        <NavbarItem className="list-none" isActive>
+        <NavbarItem>
           <Link
-            className="text-xs tracking-wide text-gray-900 font-semibold border-b-2 border-primary"
             href="#"
-            aria-current="page"
+            className="hover:text-[#37b7ff] text-[#fff]  transition-colors duration-200"
           >
-            PROCESS
+            Our Process
           </Link>
         </NavbarItem>
 
-        <NavbarItem className="list-none">
+        <NavbarItem>
           <Link
-            className="text-xs tracking-wide text-gray-800 hover:text-primary transition"
             href="#"
+            className="hover:text-[#37b7ff] text-[#fff] transition-colors duration-200"
           >
-            SERVICES
+            Our Services
           </Link>
         </NavbarItem>
 
-        <NavbarItem className="list-none">
+        <NavbarItem>
           <Link
-            className="text-xs tracking-wide text-gray-800 hover:text-primary transition"
             href="#"
+            className="hover:text-[#37b7ff] text-[#fff]  transition-colors duration-200"
           >
-            CONTACT
+            Contact Us
           </Link>
         </NavbarItem>
       </NavbarContent>

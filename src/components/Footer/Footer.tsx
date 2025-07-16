@@ -1,45 +1,63 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#000] text-white py-6 mt-12">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-        <div className="text-center md:text-left">
-          <h3 className="font-semibold text-xl">Design Hub</h3>
-          <p className="text-sm mt-2">
-            © {new Date().getFullYear()} Design Hub. All rights reserved.
-          </p>
+    <footer className="bg-black text-white py-8 mt-[15px]">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[calc(1.15rem*1)">
+        {/* Copyright */}
+        <div className="text-center md:text-left text-sm text-[#37b7ff]">
+          {new Date().getFullYear()} © The Design Hub Management. All rights
+          reserved.
         </div>
 
-        <div className="flex gap-6 mt-4 md:mt-0">
+        {/* Social Icons */}
+        <div className="flex gap-[7rem] mt-[10px]">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/TheDesignHubMgt"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
-            <FaFacebook className="text-white text-2xl hover:text-pink-500 transition-colors" />
+            <FaFacebook className="text-[calc(2rem*1)] hover:text-[#37b7ff] text-[#fff] transition-colors" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/thedesignhubmgt/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
-            <FaInstagram className="text-white text-2xl hover:text-pink-500 transition-colors" />
+            <FaInstagram className="text-[calc(2rem*1)] hover:text-[#37b7ff] text-[#fff] transition-colors" />
           </a>
           <a
-            href="https://www.twitter.com"
+            href="https://www.linkedin.com/company/thedesignhubmgt"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
-            <FaTwitter className="text-white text-2xl hover:text-pink-500 transition-colors" />
+            <FaLinkedin className="text-[calc(2rem*1)] hover:text-[#37b7ff] text-[#fff] transition-colors" />
+          </a>
+        </div>
+
+        {/* Legal Links */}
+        <div className="flex flex-wrap justify-center md:justify-end gap-[7rem] text-sm mt-[1rem] mb-[20px]">
+          <a
+            href="/terms"
+            className="hover:text-[#fff] text-[#37b7ff] transition text-[calc(1.15rem*1)]"
+          >
+            Terms of Service
           </a>
           <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/privacy"
+            className="hover:text-[#fff] text-[#37b7ff] transition text-[calc(1.15rem*1)]"
           >
-            <FaLinkedin className="text-white text-2xl hover:text-pink-500 transition-colors" />
+            Privacy Policy
+          </a>
+          <a
+            href="/cookies"
+            className="hover:text-[#fff] text-[#37b7ff] transition text-[calc(1.15rem*1)]"
+          >
+            Cookie Policy
           </a>
         </div>
       </div>
