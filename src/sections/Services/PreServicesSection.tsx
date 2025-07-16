@@ -2,11 +2,12 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
-// import { ShimmerButton } from '../../components/magicui/shimmer-button'
 import { MagicCard } from '../../components/magicui/magic-card'
 import { SparklesText } from '../../components/magicui/sparkles-text'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
+import { Particles } from '../../components/magicui/particles'
+import Social from '../../assets/images/social-media-planning.png'
 
 import {
   Card,
@@ -54,16 +55,24 @@ const iconVariants = {
 const PreServicesSection = () => {
   return (
     <section className="py-24 bg-black text-white text-center px-4">
+      {/* Particles */}
+      <Particles
+        className="absolute top-0 left-0 w-full h-full z-0"
+        color={'#37b7ff'}
+        quantity={300}
+        ease={80}
+        size={0.05}
+      />
       <p className="text-[calc(3.5rem*1.15)] font-light tracking-tight">
         Elevate Your{' '}
         <AnimatedGradientText>Digital Presence</AnimatedGradientText>
       </p>
-      <p className="text-[calc(1.15rem*1.1)] tracking-tight mb-[4%]">
+      <p className="text-[calc(1.15rem*1.1)] tracking-tight mb-[4%] mt-[-4%]">
         From idea to impact, we shape your digital future with clarity and
         style.
       </p>
 
-      <div className="grid grid-cols-2 gap-[5%] mx-auto mt-[16px] w-[45%] bottom-[5%] bg-[#000]">
+      <div className="grid grid-cols-2 gap-[5%] mx-auto mt-[16px] ml-[50%] w-[45%] bottom-[5%] bg-[#000]">
         {cards.map((card, index) => (
           <Link to={card.href} key={index} className="no-underline bg-[#000]">
             <Card className="p-0 max-w-sm w-full border-none bg-[#000] text-[#fff] ">
@@ -92,14 +101,23 @@ const PreServicesSection = () => {
         ))}
       </div>
 
-      <div className="mt-16 flex justify-center text-[calc(4.5rem*1.15)]">
-        <Link to="/services">
-          <CoolMode>
-            <RainbowButton className="text-[calc(1.5rem*1.15)]">
-              Explore Our Services <br />
-            </RainbowButton>
-          </CoolMode>
-        </Link>
+      {/* 🚀 web with Overlap */}
+      <div className="relative flex mt-[-23rem] mb-[-2rem] mr-[40rem] h-[14rem]">
+        <img
+          src={Social}
+          alt="Social Media"
+          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
+        />
+      </div>
+
+      <div className="mt-[16rem] flex justify-center">
+        {/* <Link to="/services"> */}
+        <CoolMode>
+          <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
+            Explore Our Services
+          </RainbowButton>
+        </CoolMode>
+        {/* </Link> */}
       </div>
     </section>
   )
