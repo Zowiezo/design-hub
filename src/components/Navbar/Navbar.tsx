@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            href="/process"
             className="hover:text-[#37b7ff] text-[#fff]  transition-colors duration-200"
           >
             Our Process
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            href="/services"
             className="hover:text-[#37b7ff] text-[#fff] transition-colors duration-200"
           >
             Our Services
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            href="/contact"
             className="hover:text-[#37b7ff] text-[#fff]  transition-colors duration-200"
           >
             Contact Us

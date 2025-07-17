@@ -1,9 +1,14 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 import { Marquee } from '../../components/magicui/marquee'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
 import Logo from '../../assets/images/Design.svg'
+import Rocket from '../../assets/images/Rocket.gif'
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
+gsap.registerPlugin(MotionPathPlugin)
 
 const words = [
   '|| Web Development',
@@ -15,10 +20,54 @@ const words = [
 ]
 
 const Hero = () => {
+  const orbitRef = useRef<HTMLDivElement>(null)
+  const rocketRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    const rocket = rocketRef.current
+    const orbit = orbitRef.current
+
+    if (!rocket || !orbit) return
+
+    const width = window.innerWidth
+    const height = window.innerHeight
+
+    const path = [
+      { x: 100, y: 100 },
+      { x: width - 150, y: 50 },
+      { x: width - 100, y: height - 150 },
+      { x: 50, y: height - 100 },
+      { x: 100, y: 100 }, // loop back to start
+    ]
+
+    gsap.to(rocket, {
+      duration: 15,
+      repeat: -1,
+      ease: 'power1.inOut',
+      motionPath: {
+        path: path,
+        autoRotate: true,
+        curviness: 1.25,
+      },
+    })
+  }, [])
+
   return (
     <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4 mt-[2%]">
-      {/* Logo + Text */}
-      <div className="flex flex-col items-center gap-3 max-w-[100vw] mt-[5rem]">
+      {/* Particle Background */}
+      <Particles
+        className="absolute top-0 left-0 w-full h-full z-0"
+        color={'#37b7ff'}
+        quantity={300}
+        ease={80}
+        size={0.05}
+      />
+
+      {/* Logo + Title in Orbit Container */}
+      <div
+        className="relative flex flex-col items-center gap-3 max-w-[100vw] mt-[5rem] w-[400px] h-[400px]"
+        ref={orbitRef}
+      >
         <img
           src={Logo}
           alt="The Design Hub Logo"
@@ -32,16 +81,15 @@ const Hero = () => {
             MANAGEMENT
           </p>
         </div>
-      </div>
 
-      {/* Particles */}
-      <Particles
-        className="absolute top-0 left-0 w-full h-full z-0"
-        color={'#37b7ff'}
-        quantity={300}
-        ease={80}
-        size={0.05}
-      />
+        {/* Rocket orbiting around logo+text */}
+        <img
+          ref={rocketRef}
+          src={Rocket}
+          alt="Rocket Orbiting"
+          className="absolute w-[130px] sm:w-[150px] z-20 pointer-events-none"
+        />
+      </div>
 
       {/* Main Heading */}
       <div className="z-10 text-center mt-[-3rem] max-w-[95vw] break-words px-2">
@@ -60,14 +108,12 @@ const Hero = () => {
         >
           {words.join('  ')}
         </Marquee>
-
         <Marquee
           className="text-[calc(2rem+2%)] tracking-wider uppercase"
           pauseOnHover
         >
           <AuroraText>{words.join('  ')}</AuroraText>
         </Marquee>
-
         <Marquee
           className="opacity-15 text-[calc(1rem+2%)] text-white lowercase"
           reverse

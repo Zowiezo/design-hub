@@ -15,7 +15,7 @@ import Linkedin from '../../assets/images/linkedin.png'
 
 const Contact: React.FC = () => {
   return (
-    <section className="relative bg-black text-white py-20 px-6 md:px-16 mt-[-7rem]">
+    <section className="relative bg-black text-white py-20 px-6 md:px-16">
       {/* Particles */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
