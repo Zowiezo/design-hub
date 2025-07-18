@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { Helmet } from 'react-helmet-async'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
@@ -15,6 +15,35 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden">
+        <Helmet>
+          <title>The Design Hub | Where Design Meets Innovation </title>
+          <meta
+            name="description"
+            content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+          />
+          <meta
+            name="keywords"
+            content="design, ux, ui, branding, web development, black-owned"
+          />
+          <meta
+            property="og:title"
+            content="The Design Hub | Where Design Meets Innovation"
+          />
+          <meta
+            property="og:description"
+            content="Discover our services in design, branding, UX/UI, and more."
+          />
+          <meta property="og:image" content="/assets/opengraph-image.png" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://thedesignhub.co.za" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="The Design Hub" />
+          <meta
+            name="twitter:description"
+            content="Creative, innovative design and development agency."
+          />
+          <meta name="twitter:image" content="/assets/opengraph-image.png" />
+        </Helmet>
         {/* Particles */}
         <Particles
           className="absolute top-0 left-0 w-full h-full z-0"

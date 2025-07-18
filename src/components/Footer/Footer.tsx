@@ -41,7 +41,7 @@ const Footer = () => {
             reserved.
           </div>
           <a
-            href="/terms"
+            href="/terms-of-service"
             className="hover:text-[#fff] text-[#37b7ff] transition text-[calc(1rem*1)]"
           >
             Terms of Service

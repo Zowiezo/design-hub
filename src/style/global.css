@@ -388,22 +388,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* @keyframes orbit {
-  0% {
-    transform: translateX(50%) translateY(-50%) rotate(0deg) translateX(50px)
-      rotate(0deg);
-  }
-  100% {
-    transform: translateX(50%) translateY(-50%) rotate(360deg) translateX(50px)
-      rotate(-360deg);
-  }
-}
-
-.animate-orbit {
-  animation: orbit 5s linear infinite;
-  transform-origin: center center;
-} */
-
 .animate-orbit {
   animation: orbit 3s linear infinite;
 }

@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
@@ -46,7 +48,7 @@ const steps = [
 
 const OurProcess = () => {
   const sectionsRef = useRef<Array<HTMLDivElement | null>>([])
-  const [activeStep, setActiveStep] = useState<number | null>(null)
+  const [, setActiveStep] = useState<number | null>(null)
   const sliderInstanceRef = useRef<any>(null)
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -92,15 +94,44 @@ const OurProcess = () => {
     instanceRef.current?.next()
   }
 
-  const goToPrev = () => {
-    instanceRef.current?.prev()
-  }
+  // const goToPrev = () => {
+  //   instanceRef.current?.prev()
+  // }
 
   return (
     <section
       className="relative bg-black text-white px-6 py-24 md:px-24 mt-[10rem]"
       id="our-process"
     >
+      <Helmet>
+        <title>The Design Hub | Our Process </title>
+        <meta
+          name="description"
+          content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+        />
+        <meta
+          name="keywords"
+          content="design, ux, ui, branding, web development, black-owned"
+        />
+        <meta
+          property="og:title"
+          content="The Design Hub | Where Design Meets Innovation"
+        />
+        <meta
+          property="og:description"
+          content="Discover our services in design, branding, UX/UI, and more."
+        />
+        <meta property="og:image" content="/assets/opengraph-image.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thedesignhub.co.za" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Design Hub" />
+        <meta
+          name="twitter:description"
+          content="Creative, innovative design and development agency."
+        />
+        <meta name="twitter:image" content="/assets/opengraph-image.png" />
+      </Helmet>
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
         color={'#37b7ff'}
