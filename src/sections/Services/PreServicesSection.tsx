@@ -64,7 +64,7 @@ const PreServicesSection = () => {
         />
         <meta
           name="keywords"
-          content="design, ux, ui, branding, web development, black-owned"
+          content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
         />
         <meta
           property="og:title"
@@ -74,7 +74,7 @@ const PreServicesSection = () => {
           property="og:description"
           content="Discover our services in design, branding, UX/UI, and more."
         />
-        <meta property="og:image" content="/assets/opengraph-image.png" />
+        <meta property="og:image" content="/og-image.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thedesignhub.co.za" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -83,7 +83,7 @@ const PreServicesSection = () => {
           name="twitter:description"
           content="Creative, innovative design and development agency."
         />
-        <meta name="twitter:image" content="/assets/opengraph-image.png" />
+        <meta name="twitter:image" content="/og-image.png" />
       </Helmet>
       {/* Particles */}
       <Particles

@@ -62,7 +62,7 @@ const Hero = () => {
         />
         <meta
           name="keywords"
-          content="design, ux, ui, branding, web development, black-owned"
+          content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
         />
         <meta
           property="og:title"
@@ -72,7 +72,7 @@ const Hero = () => {
           property="og:description"
           content="Discover our services in design, branding, UX/UI, and more."
         />
-        <meta property="og:image" content="/assets/opengraph-image.png" />
+        <meta property="og:image" content="/og-image.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thedesignhub.co.za" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -81,7 +81,7 @@ const Hero = () => {
           name="twitter:description"
           content="Creative, innovative design and development agency."
         />
-        <meta name="twitter:image" content="/assets/opengraph-image.png" />
+        <meta name="twitter:image" content="/og-image.png" />
       </Helmet>
 
       {/* Particle Background */}
@@ -122,7 +122,7 @@ const Hero = () => {
       </div>
 
       {/* Main Heading */}
-      <div className="z-10 text-center mt-[-3rem] max-w-[95vw] break-words px-2">
+      <div className="z-10 text-center mt-[-7rem] max-w-[95vw] break-words px-2">
         <p className="text-[calc(3rem*1)] tracking-tighter md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight">
           Where <AuroraText> DESIGN </AuroraText> Meets{' '}
           <AuroraText> INNOVATION </AuroraText>
@@ -130,7 +130,7 @@ const Hero = () => {
       </div>
 
       {/* Marquee Rows */}
-      <div className="z-10 space-y-[1%] mt-1 w-full overflow-hidden">
+      <div className="z-10 space-y-[1%] w-full overflow-hidden">
         <Marquee
           className="opacity-15 text-[calc(1rem+2%)] text-white lowercase"
           reverse

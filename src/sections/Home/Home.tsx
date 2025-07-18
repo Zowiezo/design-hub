@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden">
+      <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden mt-[-5rem]">
         <Helmet>
           <title>The Design Hub | Where Design Meets Innovation </title>
           <meta
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           />
           <meta
             name="keywords"
-            content="design, ux, ui, branding, web development, black-owned"
+            content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
           />
           <meta
             property="og:title"
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             property="og:description"
             content="Discover our services in design, branding, UX/UI, and more."
           />
-          <meta property="og:image" content="/assets/opengraph-image.png" />
+          <meta property="og:image" content="/og-image.png" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://thedesignhub.co.za" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
             name="twitter:description"
             content="Creative, innovative design and development agency."
           />
-          <meta name="twitter:image" content="/assets/opengraph-image.png" />
+          <meta name="twitter:image" content="/og-image.png" />
         </Helmet>
         {/* Particles */}
         <Particles
@@ -57,10 +57,7 @@ const Home: React.FC = () => {
           {/* Main Heading */}
           <p className="text-[calc(3.5rem*1.5)] font-light tracking-tight mb-[8rem]">
             Driven by{' '}
-            <AnimatedGradientText
-              speed={2}
-              className="text-4xl font-semibold tracking-tight"
-            >
+            <AnimatedGradientText speed={2} className="text-4xl tracking-tight">
               DESIGN.
             </AnimatedGradientText>{' '}
             <br /> Powered by{' '}
@@ -68,7 +65,7 @@ const Home: React.FC = () => {
               speed={2}
               colorFrom="#4ade80"
               colorTo="#06b6d4"
-              className="text-4xl font-semibold tracking-tight"
+              className="text-4xl tracking-tight"
             >
               PURPOSE.
             </AnimatedGradientText>

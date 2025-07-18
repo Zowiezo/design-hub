@@ -1,0 +1,12 @@
+# Allow all crawlers full access
+User-agent: *
+
+# Disallow crawling of sensitive paths (add more as needed)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /privacy-policy/
+Disallow: /terms-of-service/
+Disallow: /cookies/
+
+# Sitemap location (update if needed)
+Sitemap: https://thedesignhub.co.za/sitemap.xml
