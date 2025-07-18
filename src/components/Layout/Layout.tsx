@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
+import CookieConsent from '../CookieConsent'
 import { Particles } from '../../components/magicui/particles'
 import { Helmet } from 'react-helmet-async'
 
@@ -36,6 +37,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             size={0.05}
           />
         </div>
+        {/* Cookie Consent */}
+        <CookieConsent />
 
         {/* Page Content */}
         <div className="relative z-10">{children}</div>

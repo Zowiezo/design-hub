@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TermsOfService = () => {
   return (
     <div className="px-6 py-16 max-w-5xl mx-auto text-[#fff] mt-[10rem] ml-[10rem]">

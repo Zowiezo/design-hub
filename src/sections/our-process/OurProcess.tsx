@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
@@ -93,10 +92,6 @@ const OurProcess = () => {
   const goToNext = () => {
     instanceRef.current?.next()
   }
-
-  // const goToPrev = () => {
-  //   instanceRef.current?.prev()
-  // }
 
   return (
     <section

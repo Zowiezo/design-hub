@@ -1,5 +1,4 @@
 // About.tsx
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
