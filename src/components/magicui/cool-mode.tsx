@@ -222,7 +222,7 @@ const applyParticleEffect = (
 }
 
 interface CoolModeProps {
-  children: ReactElement<any, keyof JSX.IntrinsicElements> // restrict to DOM elements
+  children: ReactElement<any, any>
   options?: CoolParticleOptions
 }
 
