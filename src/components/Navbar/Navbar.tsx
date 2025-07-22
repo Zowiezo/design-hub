@@ -5,32 +5,19 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
   Link,
-  Button,
 } from '@heroui/react'
 
 import Logo from '../../assets/images/DH.png'
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const menuItems = ['About Us', 'Our Process', 'Our Services', 'Contact Us']
-
   return (
     <HeroNavbar
       className="fixed top-[0rem] w-full z-50 bg-[#000] py-[6px] justify-center"
       isBordered
-      // onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent>
         <NavbarBrand>
-          {/* <NavbarMenuToggle
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            className="sm:hidden"
-          /> */}
           <Link href="/">
             <img
               src={Logo}
