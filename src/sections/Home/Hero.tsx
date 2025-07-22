@@ -1,5 +1,5 @@
 'use client'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Marquee } from '../../components/magicui/marquee'
@@ -54,7 +54,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4 mt-[2%]">
-      <Helmet>
+      <Head>
         <title>The Design Hub | Where Design Meets Innovation </title>
         <meta
           name="description"
@@ -82,7 +82,7 @@ const Hero = () => {
           content="Creative, innovative design and development agency."
         />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
 
       {/* Particle Background */}
       <Particles

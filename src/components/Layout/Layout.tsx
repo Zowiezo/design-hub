@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import CookieConsent from '../CookieConsent'
 import { Particles } from '../../components/magicui/particles'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 
 type LayoutProps = {
   children?: React.ReactNode
@@ -12,7 +12,7 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col font-poppins min-h-screen">
-      <Helmet>
+      <Head>
         <title>The Design Hub Mgt</title>
         <meta
           name="description"
@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta charSet="utf-8" />
         <meta name="author" content="The Design Hub Management" />
         <html lang="en" />
-      </Helmet>
+      </Head>
 
       <Navbar />
 

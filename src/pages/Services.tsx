@@ -7,7 +7,7 @@ import { AuroraText } from '../components/magicui/aurora-text'
 import { AnimatedGradientText } from '../components/magicui/animated-gradient-text'
 import { SparklesText } from '../components/magicui/sparkles-text'
 import SEO from '../assets/images/seo.png'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 
 const Services = () => {
   const [activeService, setActiveService] = useState<number | null>(null)
@@ -17,7 +17,7 @@ const Services = () => {
       className="relative bg-black text-white px-6 py-24 md:px-24 mt-[7rem]"
       id="our-services"
     >
-      <Helmet>
+      <Head>
         <title>The Design Hub | Our Services</title>
         <meta
           name="description"
@@ -45,7 +45,7 @@ const Services = () => {
           content="Creative, innovative design and development agency."
         />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
       <div className="relative z-10 text-center max-w-4xl mx-auto mb-20">
         <p className="text-[calc(3.25rem*1)] md:text-6xl font-light tracking-tight mb-6">
           Our Services

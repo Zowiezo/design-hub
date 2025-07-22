@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden mt-[-5rem]">
-        <Helmet>
+        <Head>
           <title>The Design Hub | Where Design Meets Innovation </title>
           <meta
             name="description"
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
             content="Creative, innovative design and development agency."
           />
           <meta name="twitter:image" content="/og-image.png" />
-        </Helmet>
+        </Head>
         {/* Particles */}
         <Particles
           className="absolute top-0 left-0 w-full h-full z-0"

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
@@ -98,7 +98,7 @@ const OurProcess = () => {
       className="relative bg-black text-white px-6 py-24 md:px-24 mt-[7rem]"
       id="our-process"
     >
-      <Helmet>
+      <Head>
         <title>The Design Hub | Our Process </title>
         <meta
           name="description"
@@ -126,7 +126,7 @@ const OurProcess = () => {
           content="Creative, innovative design and development agency."
         />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
         color={'#37b7ff'}

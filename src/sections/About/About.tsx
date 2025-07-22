@@ -1,5 +1,5 @@
 // About.tsx
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
@@ -9,7 +9,7 @@ import AboutDH2 from '../../assets/images/htmlWeb.png'
 const About = () => {
   return (
     <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[7rem]">
-      <Helmet>
+      <Head>
         <title>The Design Hub | Who We Are</title>
         <meta
           name="description"
@@ -37,7 +37,7 @@ const About = () => {
           content="Creative, innovative design and development agency."
         />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
       {/* Particles */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"

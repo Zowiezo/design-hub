@@ -9,7 +9,7 @@ import { CoolMode } from '../../components/magicui/cool-mode'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { Particles } from '../../components/magicui/particles'
 import Social from '../../assets/images/social-media-planning.png'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 
 import {
   Card,
@@ -57,7 +57,7 @@ const iconVariants = {
 const PreServicesSection = () => {
   return (
     <section className="max-w-[100vw] py-[24px] bg-black text-white text-center">
-      <Helmet>
+      <Head>
         <title>The Design Hub | Our Services</title>
         <meta
           name="description"
@@ -85,7 +85,7 @@ const PreServicesSection = () => {
           content="Creative, innovative design and development agency."
         />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
       {/* Particles */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"

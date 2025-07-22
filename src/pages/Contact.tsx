@@ -6,7 +6,7 @@ import { HyperText } from '../components/magicui/hyper-text'
 import { AnimatedGradientText } from '../components/magicui/animated-gradient-text'
 import { RainbowButton } from '../components/magicui/rainbow-button'
 import { CoolMode } from '../components/magicui/cool-mode'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 
 import Phone from '../assets/images/3dicons-call-only-dynamic-color.png'
 import Email from '../assets/images/3dicons-mail-dynamic-color.png'
@@ -17,7 +17,7 @@ import Linkedin from '../assets/images/linkedin.png'
 const Contact: React.FC = () => {
   return (
     <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[7rem]">
-      <Helmet>
+      <Head>
         <title>The Design Hub | Where Design Meets Innovation</title>
         <meta
           name="description"
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
         <meta name="twitter:title" content="The Design Hub" />
         <meta name="twitter:description" content="Design meets innovation." />
         <meta name="twitter:image" content="/og-image.png" />
-      </Helmet>
+      </Head>
 
       <Particles
         className="absolute top-[0rem] left-[0rem] w-full h-full z-0"
