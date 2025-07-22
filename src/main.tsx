@@ -12,7 +12,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/Privacy'
 import TermsOfService from './pages/Term'
-// import CookiesPolicy from './components/CookieConsent'
+import CookiesPolicy from './pages/Cookie'
 
 import './style/global.css'
 
@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
-            {/* <Route path="/cookies" element={<CookiesPolicy />} /> */}
+            <Route path="/cookies" element={<CookiesPolicy />} />
           </Routes>
         </Layout>
       </BrowserRouter>

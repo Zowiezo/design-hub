@@ -316,6 +316,7 @@ body {
   color: #ffffff; /* white text for contrast */
   margin: 0;
   padding: 0;
+  padding-top: 4rem;
   min-height: 100vh;
   /* overflow: hidden; */
 }
@@ -386,6 +387,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%; /* 16px base */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 93.75%; /* ~15px */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 87.5%; /* ~14px */
+  }
 }
 
 .animate-orbit {
@@ -398,5 +412,14 @@ html {
   }
   100% {
     transform: rotate(360deg) translateX(1rem) rotate(-360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .animate-float,
+  .animate-float-slower,
+  .animate-float-random {
+    animation-duration: 7s !important;
+    animation-timing-function: ease-in-out !important;
   }
 }

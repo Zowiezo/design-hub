@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { Marquee } from '../../components/magicui/marquee'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
-import Logo from '../../assets/images/Design.svg'
+import Logo from '../../assets/images/DH.png'
 import Rocket from '../../assets/images/Rocket.gif'
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
 gsap.registerPlugin(MotionPathPlugin)

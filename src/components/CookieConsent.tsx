@@ -19,21 +19,21 @@ const CookieConsent: React.FC = () => {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-10 md:right-10 bg-[#fff] border border-gray-300 shadow-lg rounded-md p-4 z-[9999] flex flex-col md:flex-row items-center justify-between gap-4 font-poppins">
+    <div className="fixed bottom-[4rem] left-[4rem] right-[4rem] md:left-[10rem] md:right-[10rem] bg-[#000] border border-gray-300 shadow-lg rounded-md p-[4px] z-[9999] flex flex-col md:flex-row items-center justify-between gap-[4px] font-poppins">
       <p className="text-sm text-gray-700">
         This website uses cookies to enhance your experience. By continuing to
         browse, you accept our cookie policy.
       </p>
-      <div className="flex gap-2">
+      <div className="flex gap-[2rem] pb-[1rem]">
         <button
           onClick={() => handleConsent(false)}
-          className="px-3 py-1 text-sm text-gray-700 border border-gray-400 rounded hover:bg-gray-100"
+          className="px-[3rem] py-[1rem] text-[16px] text-gray-700 border border-[#fff]] rounded hover:bg-[#b7e3fe]"
         >
           Decline
         </button>
         <button
           onClick={() => handleConsent(true)}
-          className="px-3 py-1 text-sm bg-[#003d6e] text-white rounded hover:bg-[#00294d]"
+          className="px-[3rem] py-[1rem] text-[16px] bg-[#093876] text-[#fff] border border-[#093876] rounded hover:bg-[#00294d] space-[4rem]"
         >
           Accept
         </button>

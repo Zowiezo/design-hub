@@ -53,50 +53,47 @@ const Home: React.FC = () => {
           size={0.05}
         />
 
-        <div className="text-center flex flex-col max-w-4xl relative">
+        <div className="text-center flex flex-col max-w-[95vw] relative">
           {/* Main Heading */}
-          <p className="text-[calc(3.5rem*1.5)] font-light tracking-tight mb-[8rem]">
+          <p className="text-[calc(3rem*1.5)] tracking-tighter md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight mb-[1rem]">
             Driven by{' '}
-            <AnimatedGradientText speed={2} className="text-4xl tracking-tight">
-              DESIGN.
-            </AnimatedGradientText>{' '}
+            <AnimatedGradientText speed={2}>DESIGN.</AnimatedGradientText>{' '}
             <br /> Powered by{' '}
             <AnimatedGradientText
               speed={2}
               colorFrom="#4ade80"
               colorTo="#06b6d4"
-              className="text-4xl tracking-tight"
             >
               PURPOSE.
             </AnimatedGradientText>
           </p>
 
-          {/* Paragraph */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
-            <p className="text-[calc(1.5rem*0.85)] mt-[-4rem] mr-[20rem] text-justify">
-              Experience strategic solutions that elevate your brand and <br />
-              redefine your presence in the digital landscape. Our focus on{' '}
-              <br />
-              UX/UI design, branding, and web development enables us to <br />
-              create tailored experiences that foster growth and enhance <br />{' '}
-              user interaction. Starting with personalized solutions that meet{' '}
-              <br />
-              your unique needs.
-            </p>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between max-w-[95vw] gap-[2rem] px-[2rem]">
+            {/* Paragraph */}
+            <div className="lg:w-1/2">
+              <p className="text-[1.15rem] text-left whitespace-pre-line break-words">
+                Experience strategic solutions that elevate your brand and
+                redefine your presence in the digital landscape. Our focus on
+                UX/UI design, branding, and web development enables us to create
+                tailored experiences that foster growth and enhance user
+                interaction. Starting with personalized solutions that meet your
+                unique needs.
+              </p>
+            </div>
 
-            {/* 🚀 web with Overlap */}
-            <div className="relative flex  mb-[-2rem] ml-[55rem] h-[14rem] mt-[-50rem]">
+            {/* 🚀 Image */}
+            <div className="relative flex justify-center lg:justify-end w-full lg:w-1/2 mt-10 lg:mt-0">
               <img
                 src={Web}
                 alt="Web Design"
-                className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
+                className="h-[28rem] w-[28rem] sm:h-[14rem] sm:w-[14rem] md:h-[20rem] md:w-[20rem] lg:h-[24rem] lg:w-[24rem] object-contain animate-float"
               />
             </div>
           </div>
 
           {/* Highlight Text */}
           <AnimatedGradientText
-            className="text-[calc(1.25rem*1.25)] tracking-tight mt-[12rem]"
+            className="text-[calc(1.25rem*1.25)] tracking-tight mt-[1rem]"
             speed={2}
           >
             Our approach is a perfect blend of creativity and functionality.

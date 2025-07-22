@@ -16,21 +16,18 @@ import Linkedin from '../assets/images/linkedin.png'
 
 const Contact: React.FC = () => {
   return (
-    <section className="relative bg-black text-white py-20 px-6 md:px-16">
+    <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[7rem]">
       <Helmet>
-        <title>The Design Hub | Contact Us</title>
+        <title>The Design Hub | Where Design Meets Innovation</title>
         <meta
           name="description"
           content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
         />
         <meta
           name="keywords"
-          content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
+          content="The Design Hub, The Design Hub Management, TDHM, UI/UX, Web Development, Branding, Creative Studio South Africa"
         />
-        <meta
-          property="og:title"
-          content="The Design Hub | Where Design Meets Innovation"
-        />
+        <meta property="og:title" content="The Design Hub" />
         <meta
           property="og:description"
           content="Discover our services in design, branding, UX/UI, and more."
@@ -40,95 +37,91 @@ const Contact: React.FC = () => {
         <meta property="og:url" content="https://thedesignhub.co.za" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="The Design Hub" />
-        <meta
-          name="twitter:description"
-          content="Creative, innovative design and development agency."
-        />
+        <meta name="twitter:description" content="Design meets innovation." />
         <meta name="twitter:image" content="/og-image.png" />
       </Helmet>
-      {/* Particles */}
+
       <Particles
-        className="absolute top-0 left-0 w-full h-full z-0"
+        className="absolute top-[0rem] left-[0rem] w-full h-full z-0"
         color={'#37b7ff'}
         quantity={300}
         ease={80}
         size={0.05}
       />
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start justify-between mt-[6rem]">
-        {/* Left Side – Contact Info */}
-        <p className="text-[calc(3.5rem*1.15)] font-light tracking-tight ml-[20rem]">
-          We’d love to <AuroraText>hear from you.</AuroraText>
-        </p>
-        <div className="lg:w-1/2 space-y-6 ml-[10rem]">
-          {/* Email Info */}
-          <div>
-            {/* 🚀 Email Icon*/}
-            <div className="flex items-start gap-4">
+      <div className="relative z-10 max-w-[95vw] mx-auto flex flex-col md:flex-row gap-[12px] justify-center items-start">
+        {/* LEFT COLUMN */}
+        <div className="w-full md:w-1/2 flex flex-col gap-[6px]">
+          <p className="text-center md:text-left text-[2.75rem] md:text-[4rem] lg:text-[5rem] leading-tight tracking-tighter">
+            We’d love to <AuroraText>hear from you.</AuroraText>
+          </p>
+
+          {/* Contact Info */}
+          <div className="space-y-[8px] ml-[2rem]">
+            {/* Email */}
+            <div className="flex items-start gap-[4px]">
               <img
                 src={Email}
                 alt="Email Icon"
-                className="h-[2.5rem] w-[2.5rem] object-contain animate-float"
+                className="h-[15vh] w-[15vw] object-contain animate-float"
               />
+              <div>
+                <p className="text-lg">Email Us</p>
+                <a
+                  href="mailto:hello@thedesignhub.co.za"
+                  className="text-[#37b7ff] text-xl"
+                >
+                  <HyperText>hello@thedesignhub.co.za</HyperText>
+                </a>
+                <p className="text-gray-400 text-sm mb-[5rem]">
+                  We typically respond within 1–2 business days.
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-[calc(1.15rem*1)] mt-[-0.5rem] mb-[-0.30rem]">
-                Email Us
-              </p>
-              <a
-                href="mailto:hello@thedesignhub.co.za"
-                className="text-[#37b7ff] text-[calc(1.15rem*1.15)]"
-              >
-                <HyperText>hello@thedesignhub.co.za</HyperText>
-              </a>
-              <p className="text-[calc(1.15rem*1)] text-gray-400 mt-[-0.10rem]">
-                We typically respond within <br /> one to two business days.
-              </p>
-            </div>
-          </div>
 
-          {/* Phone Info */}
-          <div className="text-[calc(1.15rem*1)] font-semibold">
-            {/* 🚀 Phone Icon*/}
-            <div className="flex items-start gap-4 mt-8">
+            {/* Phone */}
+            <div className="flex items-start gap-[4px]">
               <img
                 src={Phone}
                 alt="Phone Icon"
-                className="h-[2.5rem] w-[2.5rem] object-contain animate-float mt-[4rem]"
+                className="h-[15vh] w-[15vw] object-contain animate-float"
               />
+              <div>
+                <p className="text-lg">Call Us</p>
+                <a href="tel:+27686499017" className="text-[#37b7ff] text-xl">
+                  <HyperText>+27 68 649 9017</HyperText>
+                </a>
+                <p className="text-gray-400 text-sm mb-[5rem]">
+                  Monday – Friday, 8 AM – 5 PM
+                </p>
+              </div>
             </div>
 
-            <p className="text-[calc(1.15rem*1)] mt-[-0.5rem] mb-[-0.30rem]">
-              Call Us
-            </p>
-            <a
-              href="tel:+27686499017"
-              className="text-[#37b7ff] text-[calc(1.15rem*1.15)]"
-            >
-              <HyperText>+27 68 649 9017</HyperText>
-            </a>
-            <p className="text-[calc(1.15rem*1)] text-gray-400 mt-[-0.10rem]">
-              Monday – Friday
-              <br />8 AM – 5 PM
-            </p>
+            {/* MIDDLE FLOATING MAIL IMAGE */}
+            <div className="flex justify-end items-end w-full md:w-auto">
+              <img
+                src={Mail}
+                alt="Social Media Mail"
+                className="h-[25rem] w-[25rem] float-right animate-float  mr-[10rem] mt-[-35rem]"
+              />
+            </div>
           </div>
         </div>
 
-        {/* 🚀 Social Media Mail with Overlap */}
-        <div className="relative flex ml-[40rem] mt-[-20rem] h-[14rem]">
+        {/* MIDDLE FLOATING MAIL IMAGE */}
+        {/* <div className="flex justify-center items-center w-full md:w-auto">
           <img
             src={Mail}
             alt="Social Media Mail"
-            className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
+            className="h-[20rem] w-[20rem] object-contain animate-float"
           />
-        </div>
+        </div> */}
 
-        {/* Right Side – Form */}
-
-        <div className="lg:w-1/2 bg-[#111111] p-8 rounded-xl shadow-xl ml-[45rem] mt-[-19rem] w-full max-w-[35rem]">
-          <p className="text-[calc(1.15rem*1.5)] mb-6 ml-[2.5rem]">
+        {/* RIGHT COLUMN – FORM */}
+        <div className="w-full md:w-1/2 bg-[#111111] p-[2rem] rounded-xl shadow-xl max-w-[35rem] mx-auto">
+          <p className="text-[1.75rem] md:text-[4rem] lg:text-[5rem] mb-4 text-center">
             Have questions or need assistance? <br />
-            <span className="text-[#b7e3fe] ml-[7.5rem]">
+            <span className="text-[#b7e3fe]">
               <AnimatedGradientText>We’re Here to Help!</AnimatedGradientText>
             </span>
           </p>
@@ -136,72 +129,58 @@ const Contact: React.FC = () => {
           <form
             action="https://formspree.io/f/mpwlzbzl"
             method="POST"
-            className="space-y-6 ml-[8rem] mt-[-1rem]"
+            className="space-y-[6px]"
           >
             {/* Row 1: Name + Surname */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-[4px]">
               <div className="flex-1">
-                <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                  Name
-                </label>
+                <label className="text-sm font-medium">Name</label>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Enter your name"
                   required
-                  className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                  className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] focus:ring-2 focus:ring-[#37b7ff]"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                  Surname
-                </label>
+                <label className="text-sm font-medium">Surname</label>
                 <input
                   type="text"
                   name="surname"
-                  placeholder="Enter your surname"
                   required
-                  className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                  className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] focus:ring-2 focus:ring-[#37b7ff]"
                 />
               </div>
             </div>
 
             {/* Row 2: Phone + Email */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-[4px]">
               <div className="flex-1">
-                <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                  Phone Number
-                </label>
+                <label className="text-sm font-medium">Phone</label>
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="+27..."
-                  className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                  className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] focus:ring-2 focus:ring-[#37b7ff]"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                  Email
-                </label>
+                <label className="text-sm font-medium">Email</label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="email@example.com"
                   required
-                  className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                  className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] focus:ring-2 focus:ring-[#37b7ff]"
                 />
               </div>
             </div>
 
             {/* Services */}
             <div>
-              <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                Services
-              </label>
+              <label className="text-sm font-medium">Services</label>
               <select
                 name="service"
                 required
-                className="w-full max-w-[20rem] h-[2rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] focus:ring-2 focus:ring-[#37b7ff]"
               >
                 <option value="">Select a service</option>
                 <option value="UX/UI Design">UX/UI Design</option>
@@ -214,65 +193,62 @@ const Contact: React.FC = () => {
 
             {/* Message */}
             <div>
-              <label className="block text-[calc(1.15rem*0.90)] font-medium mb-1">
-                Message
-              </label>
+              <label className="text-sm font-medium">Message</label>
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Tell us more..."
                 required
-                className="w-full max-w-[20rem] h-[2.75rem] px-5 py-4 bg-black border border-[#444] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[0.15rem]"
+                className="w-full bg-black border border-[#444] rounded-md text-white px-[4px] py-[2px] mb-[1rem] focus:ring-2 focus:ring-[#37b7ff]"
               ></textarea>
             </div>
 
-            {/* Submit Button */}
             <CoolMode>
               <RainbowButton
                 type="submit"
-                className="w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem]"
+                className="w-full py-[3px] pt-[15px] text-[#fff] bg-black border border-white rounded-md focus:ring-2 focus:ring-[#37b7ff]"
               >
                 Send Message
               </RainbowButton>
             </CoolMode>
           </form>
         </div>
-        {/* Social Media Icons */}
-        <div className="flex items-center gap-[6rem] mt-[-10rem] mb-[8rem] ml-[10rem]">
-          <a
-            href="https://www.facebook.com/TheDesignHubMgt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={Facebook}
-              alt="Facebook"
-              className="h-[5rem] w-[5rem] object-contain hover:scale-150 transition-transform duration-200"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/thedesignhubmgt/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={Instagram}
-              alt="Instagram"
-              className="h-[5rem] w-[5rem] object-contain hover:scale-150 transition-transform duration-200"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/thedesignhubmgt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={Linkedin}
-              alt="LinkedIn"
-              className="h-[5rem] w-[5rem] object-contain hover:scale-150 transition-transform duration-200"
-            />
-          </a>
-        </div>
+      </div>
+
+      {/* SOCIAL MEDIA */}
+      <div className="flex justify-center items-center gap-12 mt-[16px] mb-[2.5rem]">
+        <a
+          href="https://www.facebook.com/TheDesignHubMgt"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={Facebook}
+            alt="Facebook"
+            className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/thedesignhubmgt/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={Instagram}
+            alt="Instagram"
+            className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/thedesignhubmgt"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={Linkedin}
+            alt="LinkedIn"
+            className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"
+          />
+        </a>
       </div>
     </section>
   )

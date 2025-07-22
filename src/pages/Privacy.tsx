@@ -1,10 +1,10 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="px-6 py-16 max-w-5xl mx-auto text-[#fff] mt-[10rem] ml-[10rem]">
-      <h2 className="text-4xl font-bold mb-4 text-black">Privacy Policy</h2>
-      <p className="text-sm text-gray-500 mb-12">
-        Effective Date: July 16, 2025
+    <div className="px-6 py-16 max-w-5xl mx-auto text-[#fff] mt-[5rem] ml-[5rem]">
+      <p className="text-[calc(3.25rem*1)] md:text-6xl font-light tracking-tight text-center">
+        Privacy Policy
       </p>
+      <p className="text-sm text-gray-500 mb-12">Last updated: July 16, 2025</p>
 
       <section className="mb-10">
         <h3 className="text-2xl font-semibold mb-2">1. Who We Are</h3>

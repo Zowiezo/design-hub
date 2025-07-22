@@ -1,6 +1,7 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, easeInOut } from 'framer-motion'
+
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { MagicCard } from '../../components/magicui/magic-card'
 import { SparklesText } from '../../components/magicui/sparkles-text'
@@ -49,13 +50,13 @@ const iconVariants = {
   initial: { y: -10, scale: 1 },
   animate: {
     y: [0, -8, 0],
-    transition: { duration: 1.5, repeat: Infinity, ease: 'easeInOut' },
+    transition: { duration: 1.5, repeat: Infinity, ease: easeInOut },
   },
 }
 
 const PreServicesSection = () => {
   return (
-    <section className="py-24 bg-black text-white text-center px-4">
+    <section className="max-w-[100vw] py-[24px] bg-black text-white text-center">
       <Helmet>
         <title>The Design Hub | Our Services</title>
         <meta
@@ -93,19 +94,20 @@ const PreServicesSection = () => {
         ease={80}
         size={0.05}
       />
-      <p className="text-[calc(3.5rem*1.15)] font-light tracking-tight">
+      <p className="text-[calc(3rem*1.5)] tracking-tighter sm:text-[calc(2rem*1.5)] md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight mb-[1rem]">
+        {' '}
         Elevate Your{' '}
         <AnimatedGradientText>Digital Presence</AnimatedGradientText>
       </p>
-      <p className="text-[calc(1.15rem*1.1)] tracking-tight mb-[4%] mt-[-4%]">
+      <p className="text-[1.15rem] whitespace-pre-line break-words text-center">
         From idea to impact, we shape your digital future with clarity and
         style.
       </p>
 
-      <div className="grid grid-cols-2 gap-[5%] mx-auto mt-[16px] ml-[50%] w-[45%] bottom-[5%] bg-[#000]">
+      <div className="grid grid-cols-2 gap-[20%] mx-auto mt-[16px] ml-[40%] w-[45%] bottom-[5%] bg-[#000]">
         {cards.map((card, index) => (
           <div key={index} className="no-underline bg-[#000]">
-            <Card className="p-0 max-w-sm w-full border-none bg-[#000] text-[#fff] ">
+            <Card className="p-[0rem] max-w-sm w-full border-none bg-[#000] text-[#fff] ">
               <MagicCard className="p-0">
                 <div className="bg-[#000]">
                   <motion.div
@@ -129,18 +131,17 @@ const PreServicesSection = () => {
             </Card>
           </div>
         ))}
+        {/* 🚀 web with Overlap */}
+        <div className="relative flex mt-[-30rem] ml-[-40rem] h-[14rem]">
+          <img
+            src={Social}
+            alt="Social Media"
+            className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[10rem] sm:w-[10rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
+          />
+        </div>
       </div>
 
-      {/* 🚀 web with Overlap */}
-      <div className="relative flex mt-[-23rem] mb-[-2rem] mr-[40rem] h-[14rem]">
-        <img
-          src={Social}
-          alt="Social Media"
-          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
-        />
-      </div>
-
-      <div className="mt-[16rem] flex justify-center">
+      <div className="mt-[9rem] flex justify-center">
         <Link to="/services">
           <CoolMode>
             <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">

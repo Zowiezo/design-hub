@@ -14,7 +14,7 @@ const Services = () => {
 
   return (
     <section
-      className="relative bg-black text-white px-6 py-24 md:px-24 mt-[10rem]"
+      className="relative bg-black text-white px-6 py-24 md:px-24 mt-[7rem]"
       id="our-services"
     >
       <Helmet>
