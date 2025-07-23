@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 
 const CookieConsent: React.FC = () => {
-  const [showBanner, setShowBanner] = useState(true)
+  const [showBanner, setShowBanner] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent')
