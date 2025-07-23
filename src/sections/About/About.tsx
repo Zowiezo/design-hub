@@ -1,8 +1,11 @@
-// About.tsx
+'use client'
+
 import Head from 'next/head'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
+import Image from 'next/image'
+
 import AboutDH from '../../assets/images/web-background.png'
 import AboutDH2 from '../../assets/images/htmlWeb.png'
 
@@ -62,7 +65,7 @@ const About = () => {
 
       {/* 🚀 Social Media Mail with Overlap */}
       <div className="relative flex ml-[45rem] mt-[3rem] h-[14rem]">
-        <img
+        <Image
           src={AboutDH}
           alt="Social Media Mail"
           className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
@@ -109,7 +112,7 @@ const About = () => {
 
       {/* 🚀 Social Media Mail with Overlap */}
       <div className="relative flex mr-[45rem] h-[14rem]">
-        <img
+        <Image
           src={AboutDH2}
           alt="Social Media Mail"
           className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"

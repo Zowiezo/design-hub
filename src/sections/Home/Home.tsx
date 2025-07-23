@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Image from 'next/image'
+import Link from 'next/link'
 import Head from 'next/head'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
@@ -9,6 +10,7 @@ import PreServicesSection from '../../sections/Services/PreServicesSection'
 import Contact from '../../sections/Contact/Contact'
 import Hero from './Hero'
 import Web from '../../assets/images/online-marketing.png'
+// import { Import } from 'lucide-react'
 
 const Home: React.FC = () => {
   return (
@@ -83,7 +85,7 @@ const Home: React.FC = () => {
 
             {/* 🚀 Image */}
             <div className="relative flex justify-center lg:justify-end w-full lg:w-1/2 mt-10 lg:mt-0">
-              <img
+              <Image
                 src={Web}
                 alt="Web Design"
                 className="h-[28rem] w-[28rem] sm:h-[14rem] sm:w-[14rem] md:h-[20rem] md:w-[20rem] lg:h-[24rem] lg:w-[24rem] object-contain animate-float"
@@ -101,7 +103,7 @@ const Home: React.FC = () => {
 
           {/* CTA */}
           <div className="pt-[5%] flex justify-center">
-            <Link to="/about">
+            <Link href="/about">
               <CoolMode>
                 <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
                   Discover Our Story

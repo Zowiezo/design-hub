@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react'
-import { NavLink as RouterLink, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './Navbar.module.css'
 
 interface CustomNavLinkProps {
@@ -8,16 +11,16 @@ interface CustomNavLinkProps {
 }
 
 const CustomNavLink: React.FC<CustomNavLinkProps> = ({ to, label }) => {
-  const location = useLocation()
-  const isActive = location.pathname === to
+  const pathname = usePathname()
+  const isActive = pathname === to
 
   return (
-    <RouterLink
-      to={to}
+    <Link
+      href={to}
       className={`${styles.link} ${isActive ? styles.active : ''}`}
     >
       {label}
-    </RouterLink>
+    </Link>
   )
 }
 

@@ -1,6 +1,7 @@
-// import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import { motion, easeInOut } from 'framer-motion'
+import Head from 'next/head'
+import Image from 'next/image'
 
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { MagicCard } from '../../components/magicui/magic-card'
@@ -8,8 +9,8 @@ import { SparklesText } from '../../components/magicui/sparkles-text'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { Particles } from '../../components/magicui/particles'
+
 import Social from '../../assets/images/social-media-planning.png'
-import Head from 'next/head'
 
 import {
   Card,
@@ -17,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from '../../components/components/ui/card'
+import { Link } from 'lucide-react'
 
 const cards = [
   {
@@ -133,7 +135,7 @@ const PreServicesSection = () => {
         ))}
         {/* 🚀 web with Overlap */}
         <div className="relative flex mt-[-30rem] ml-[-40rem] h-[14rem]">
-          <img
+          <Image
             src={Social}
             alt="Social Media"
             className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[30rem] w-[30rem] sm:h-[10rem] sm:w-[10rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
@@ -142,7 +144,7 @@ const PreServicesSection = () => {
       </div>
 
       <div className="mt-[9rem] flex justify-center">
-        <Link to="/services">
+        <Link href="/services">
           <CoolMode>
             <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
               Explore Our Services

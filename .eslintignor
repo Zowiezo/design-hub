@@ -1,0 +1,4 @@
+# Ignore magicui components
+src/components/magicui/*
+src/components/components/ui/button.tsx
+src/heroicons.d.ts

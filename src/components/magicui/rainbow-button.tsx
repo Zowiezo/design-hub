@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { cn } from '../../components/lib/utils'
 import React from 'react'
 

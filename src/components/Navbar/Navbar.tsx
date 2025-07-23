@@ -1,5 +1,3 @@
-// @ts-ignore
-import React from 'react'
 import {
   Navbar as HeroNavbar,
   NavbarBrand,
@@ -8,21 +6,25 @@ import {
   Link,
 } from '@heroui/react'
 
+import Image from 'next/image'
+
 import Logo from '../../assets/images/DH.png'
 
 const Navbar = () => {
   return (
     <HeroNavbar
-      className="fixed top-[0rem] w-full z-50 bg-[#000] py-[6px] justify-center"
+      className="fixed top-[0rem] w-full z-50 bg-[#000] py-[5px] text-sm justify-center"
       isBordered
     >
       <NavbarContent>
         <NavbarBrand>
           <Link href="/">
-            <img
+            <Image
               src={Logo}
               alt="The Design Hub Logo"
-              className="h-[5rem] w-[5rem] sm:h-[20rem] sm:w-[20rem] md:h-[20rem] md:w-[20rem] object-contain ml-[5rem] mt-[1.5rem]"
+              width={55}
+              height={55}
+              className="md:h-[20rem] md:w-[20rem] object-contain"
             />{' '}
           </Link>{' '}
         </NavbarBrand>
@@ -30,7 +32,7 @@ const Navbar = () => {
 
       {/* Centered Nav Links */}
       <NavbarContent
-        className=" hidden sm:flex gap-[4px] flex justify-center items-center gap-[7rem] mr-[13rem] uppercase text-[calc(1.5rem*1)] tracking-widest relative z-10"
+        className="hidden sm:flex flex justify-center items-center gap-[4rem] mr-[27rem] uppercase text-[calc(1.5rem*1)] tracking-widest relative z-10 text-sm"
         justify="center"
       >
         <NavbarItem className="list-none">

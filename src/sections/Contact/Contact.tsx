@@ -6,6 +6,8 @@ import { HyperText } from '../../components/magicui/hyper-text'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
+
+import Image from 'next/image'
 import Head from 'next/head'
 
 import Phone from '../../assets/images/3dicons-call-only-dynamic-color.png'
@@ -60,7 +62,7 @@ const Contact: React.FC = () => {
           <div className="space-y-[8px] ml-[2rem]">
             {/* Email */}
             <div className="flex items-start gap-[4px]">
-              <img
+              <Image
                 src={Email}
                 alt="Email Icon"
                 className="h-[15vh] w-[15vw] object-contain animate-float"
@@ -81,7 +83,7 @@ const Contact: React.FC = () => {
 
             {/* Phone */}
             <div className="flex items-start gap-[4px]">
-              <img
+              <Image
                 src={Phone}
                 alt="Phone Icon"
                 className="h-[15vh] w-[15vw] object-contain animate-float"
@@ -99,7 +101,7 @@ const Contact: React.FC = () => {
 
             {/* MIDDLE FLOATING MAIL IMAGE */}
             <div className="flex justify-end items-end w-full md:w-auto">
-              <img
+              <Image
                 src={Mail}
                 alt="Social Media Mail"
                 className="h-[25rem] w-[25rem] float-right animate-float  mr-[10rem] mt-[-35rem]"
@@ -221,7 +223,7 @@ const Contact: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src={Facebook}
             alt="Facebook"
             className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"
@@ -232,7 +234,7 @@ const Contact: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src={Instagram}
             alt="Instagram"
             className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"
@@ -243,7 +245,7 @@ const Contact: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src={Linkedin}
             alt="LinkedIn"
             className="h-[14vh] w-[14vw] object-contain hover:scale-125 transition-transform duration-200"

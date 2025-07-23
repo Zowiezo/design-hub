@@ -29,7 +29,6 @@ This site serves as the digital home for **The Design Hub**, showcasing:
 | Magic UI       | Stunning animated UI components        |
 | GSAP           | Custom motion & scroll-based animation |
 | Framer Motion  | Fluid motion design                    |
-| Vite           | Fast development tooling               |
 
 ---
 

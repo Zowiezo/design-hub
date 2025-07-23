@@ -8,6 +8,8 @@ import { Particles } from '../../components/magicui/particles'
 import Logo from '../../assets/images/DH.png'
 import Rocket from '../../assets/images/Rocket.gif'
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
+import Image from 'next/image'
+
 gsap.registerPlugin(MotionPathPlugin)
 
 const words = [
@@ -98,7 +100,7 @@ const Hero = () => {
         className="relative flex flex-col items-center gap-3 max-w-[100vw] mt-[5rem] w-[400px] h-[400px]"
         ref={orbitRef}
       >
-        <img
+        <Image
           src={Logo}
           alt="The Design Hub Logo"
           className="h-[10rem] w-[10rem] sm:h-[20rem] sm:w-[20rem] md:h-[20rem] md:w-[20rem] object-contain"
@@ -113,11 +115,13 @@ const Hero = () => {
         </div>
 
         {/* Rocket orbiting around logo+text */}
-        <img
+        <Image
           ref={rocketRef}
           src={Rocket}
           alt="Rocket Orbiting"
-          className="absolute w-[130px] sm:w-[150px] z-20 pointer-events-none"
+          width={130}
+          height={130}
+          className="absolute z-20 pointer-events-none"
         />
       </div>
 
