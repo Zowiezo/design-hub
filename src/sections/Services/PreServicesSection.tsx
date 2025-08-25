@@ -19,7 +19,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '../../components/components/ui/card'
+} from '../../components/ui/card'
 
 const cards = [
   {
