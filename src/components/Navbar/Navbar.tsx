@@ -6,8 +6,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
 } from '@heroui/react'
+import Link from 'next/link'
+
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Logo from '../../assets/images/DH.png'
