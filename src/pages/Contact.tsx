@@ -1,6 +1,6 @@
 import React from 'react'
-import MainContact from '../sections/Contact/MainContact'
+import Contact from '../sections/Contact/Contact'
 
 export default function ContactPage() {
-  return <MainContact />
+  return <Contact />
 }
