@@ -10,7 +10,6 @@ import PreServicesSection from '../../sections/Services/PreServicesSection'
 import Contact from '../../sections/Contact/Contact'
 import Hero from './Hero'
 import Web from '../../assets/images/online-marketing.png'
-// import { Import } from 'lucide-react'
 
 const Home: React.FC = () => {
   return (
