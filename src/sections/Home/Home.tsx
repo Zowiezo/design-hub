@@ -55,12 +55,13 @@ const Home: React.FC = () => {
           size={0.05}
         />
 
-        <div className="text-center flex flex-col max-w-[95vw] relative">
+        <div className="relative z-10 flex flex-col items-center max-w-[1200px] w-full px-4 sm:mt-[15%]">
           {/* Main Heading */}
-          <p className="text-[calc(3rem*1.5)] tracking-tighter md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight mb-[1rem]">
+          <p className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] text-center tracking-tighter leading-tight mb-[10%]">
             Driven by{' '}
-            <AnimatedGradientText speed={2}>DESIGN.</AnimatedGradientText>{' '}
-            <br /> Powered by{' '}
+            <AnimatedGradientText speed={2}>DESIGN.</AnimatedGradientText>
+            <br />
+            Powered by{' '}
             <AnimatedGradientText
               speed={2}
               colorFrom="#4ade80"
@@ -70,10 +71,11 @@ const Home: React.FC = () => {
             </AnimatedGradientText>
           </p>
 
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between max-w-[95vw] gap-[2rem] px-[2rem]">
-            {/* Paragraph */}
-            <div className="lg:w-1/2">
-              <p className="text-[1.15rem] text-left whitespace-pre-line break-words">
+          {/* Text + Image Row */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
+            {/* Text */}
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <p className="text-[1.15rem] md:text-[1.25rem] leading-relaxed break-words md:ml-[15%] font-light">
                 Experience strategic solutions that elevate your brand and
                 redefine your presence in the digital landscape. Our focus on
                 UX/UI design, branding, and web development enables us to create
@@ -83,29 +85,31 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            {/* 🚀 Image */}
-            <div className="relative flex justify-center lg:justify-end w-full lg:w-1/2 mt-10 lg:mt-0">
+            {/* Image */}
+            <div className="lg:w-1/2 flex justify-center lg:justify-end mt-[-2%]">
               <Image
                 src={Web}
                 alt="Web Design"
-                className="h-[28rem] w-[28rem] sm:h-[14rem] sm:w-[14rem] md:h-[20rem] md:w-[20rem] lg:h-[24rem] lg:w-[24rem] object-contain animate-float"
+                width={400}
+                height={400}
+                className="object-contain animate-float"
               />
             </div>
           </div>
 
           {/* Highlight Text */}
           <AnimatedGradientText
-            className="text-[calc(1.25rem*1.25)] tracking-tight mt-[1rem]"
+            className="text-[1.25rem] md:text-[1.5rem] tracking-tight mt-8 text-center"
             speed={2}
           >
             Our approach is a perfect blend of creativity and functionality.
           </AnimatedGradientText>
 
-          {/* CTA */}
-          <div className="pt-[5%] flex justify-center">
+          {/* CTA Button */}
+          <div className="mt-6 flex justify-center">
             <Link href="/about">
               <CoolMode>
-                <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-[#fff] rounded-md text-[#ffffff] focus:outline-none focus:ring-2 focus:ring-[#37b7ff] mb-[1.5rem] text-[calc(1.5rem*1.11)]">
+                <RainbowButton className="font-poppins w-full max-w-[20rem] h-[2.5rem] px-5 py-4 bg-black border border-white rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#37b7ff] text-[1.25rem]">
                   Discover Our Story
                 </RainbowButton>
               </CoolMode>

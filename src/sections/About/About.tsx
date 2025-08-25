@@ -11,36 +11,15 @@ import AboutDH2 from '../../assets/images/htmlWeb.png'
 
 const About = () => {
   return (
-    <section className="bg-black text-[#fff] px-6 py-20 md:px-24 mt-[7rem]">
+    <section className="bg-black text-[#fff] px-6 py-20 md:px-24 font-Poppins">
       <Head>
         <title>The Design Hub | Who We Are</title>
         <meta
           name="description"
           content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
         />
-        <meta
-          name="keywords"
-          content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
-        />
-        <meta
-          property="og:title"
-          content="The Design Hub | Where Design Meets Innovation"
-        />
-        <meta
-          property="og:description"
-          content="Discover our services in design, branding, UX/UI, and more."
-        />
-        <meta property="og:image" content="/og-image.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thedesignhub.co.za" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="The Design Hub" />
-        <meta
-          name="twitter:description"
-          content="Creative, innovative design and development agency."
-        />
-        <meta name="twitter:image" content="/og-image.png" />
       </Head>
+
       {/* Particles */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
@@ -49,102 +28,125 @@ const About = () => {
         ease={80}
         size={0.05}
       />
+
       {/* Header */}
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-[calc(3.5rem*1)] md:text-6xl tracking-tight">
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <p className="text-5xl md:text-6xl font-extralight tracking-tight">
           Who We Are
         </p>
-        <p className="text-[calc(1.2rem*1)] text-gray-400 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4 font-light">
           <AuroraText>
             The Design Hub Management is a creative tech studio crafting
-            unforgettable digital <br /> experiences through intentional design,
+            unforgettable digital experiences through intentional design,
             innovative code, and bold storytelling.
           </AuroraText>
         </p>
       </div>
 
-      {/* 🚀 Social Media Mail with Overlap */}
-      <div className="relative flex ml-[45rem] mt-[3rem] h-[14rem]">
-        <Image
-          src={AboutDH}
-          alt="Social Media Mail"
-          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
-        />
-      </div>
-
-      {/* About Description */}
-      <div className="max-w-4xl mx-auto text-[calc(1.2rem*1)] text-gray-300 space-y-6 max-w-3xl mx-auto ml-[15rem] mt-[-15rem]">
-        <p>
-          We specialize in{' '}
-          <AnimatedGradientText>
-            {' '}
-            <strong className="text-white">UX/UI design,</strong>
-          </AnimatedGradientText>
-          <AnimatedGradientText>
-            <strong className="text-white"> branding</strong>,
-          </AnimatedGradientText>
-          <AnimatedGradientText>
-            <strong className="text-white"> web development</strong>,
-          </AnimatedGradientText>{' '}
-          <br />
-          and
-          <AnimatedGradientText>
-            <strong className="text-white"> digital strategy</strong>
-          </AnimatedGradientText>
-          —merging thoughtful design with <br />
-          future-forward technology.
-        </p>
-
-        <p>
-          Founded by Zoleka “Zowie” Kubheka — she is an engineer with an eye{' '}
-          <br />
-          for beauty and a mind for systems. We empower brands to <br />{' '}
-          connect, grow, and stand out in the digital space.
-        </p>
-
-        <p>
-          Our work is guided by purpose, powered by creativity, and rooted{' '}
-          <br />
-          in innovation. Every pixel, every line of code, and every brand
-          identity <br /> we create is built with care and intention.
-        </p>
-      </div>
-
-      {/* 🚀 Social Media Mail with Overlap */}
-      <div className="relative flex mr-[45rem] h-[14rem]">
-        <Image
-          src={AboutDH2}
-          alt="Social Media Mail"
-          className="absolute left-1/2 transform -translate-x-[55%] z-10 h-[20rem] w-[20rem] sm:h-[16rem] sm:w-[16rem] md:h-[18rem] md:w-[18rem] object-contain animate-float"
-        />
-      </div>
-
-      {/* Mission & Vision */}
-      <div className="md:text-6xl  mt-[-13rem] tracking-tight">
-        {/* Mission */}
-        <div>
-          <p className="text-[calc(2.5rem*1)] md:text-6xl  mb-4 tracking-tight text-center">
-            <AnimatedGradientText>Our Mission</AnimatedGradientText>
+      {/* About Section */}
+      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10">
+        {/* Text Content */}
+        <div className="space-y-6 text-gray-300 text-left text-lg leading-relaxed font-light">
+          <p>
+            We specialize in{' '}
+            <AnimatedGradientText>
+              <strong>UX/UI design,</strong>
+            </AnimatedGradientText>{' '}
+            <AnimatedGradientText>
+              <strong>branding</strong>,
+            </AnimatedGradientText>{' '}
+            <AnimatedGradientText>
+              <strong>web development</strong>,
+            </AnimatedGradientText>{' '}
+            and{' '}
+            <AnimatedGradientText>
+              <strong>digital strategy</strong>
+            </AnimatedGradientText>
+            —merging thoughtful design with future-forward technology.
           </p>
-          <p className="text-[calc(1.2rem*1)] text-gray-300 ml-[35rem] mt-[-3rem]">
-            To revolutionize digital experiences by blending <br /> design and
-            innovation to create impactful, user-centric <br /> solutions that
-            empower businesses and individuals to <br />
-            succeed in the ever-evolving digital landscape.
+
+          <p>
+            Founded by Zoleka “Zowie” Kubheka, a visionary UX/UI designer and
+            engineer, this studio was created to redefine{' '}
+            <AuroraText> digital experiences.</AuroraText> With an eye for
+            beauty and a mind for systems, Zowie empowers brands to connect,
+            grow, and stand out in a crowded{' '}
+            <AuroraText>digital space.</AuroraText>
+          </p>
+
+          <p>
+            Our work is guided by purpose, powered by{' '}
+            <AnimatedGradientText>
+              {' '}
+              <strong>creativity, </strong>
+            </AnimatedGradientText>{' '}
+            and rooted in{' '}
+            <AnimatedGradientText>
+              <strong> innovation. </strong>
+            </AnimatedGradientText>
+            Every <AnimatedGradientText>pixel,</AnimatedGradientText> every line
+            of <AnimatedGradientText>code,</AnimatedGradientText> and every{' '}
+            <AnimatedGradientText>brand identity</AnimatedGradientText>
+            we create is built with care and intention.
           </p>
         </div>
 
-        {/* Vision */}
-        <div>
-          <p className="text-[calc(2.5rem*1)] md:text-6xl tracking-tight text-center">
-            <AnimatedGradientText>Our Vision</AnimatedGradientText>
-          </p>
-          <p className="text-[calc(1.2rem*1)] text-gray-300 ml-[15rem] mt-[-3rem] mb-[3rem]">
-            To become a leading global agency where creativity meets
-            technology—driving <br />
-            design-forward solutions that shape the future of digital
-            interaction.
-          </p>
+        {/* Image */}
+        <div className="flex justify-center md:justify-end relative">
+          <Image
+            src={AboutDH}
+            alt="About us"
+            width={350}
+            height={450}
+            className="rounded-2xl shadow-lg animate-float"
+          />
+        </div>
+      </div>
+
+      {/* Mission, Image & Vision Section */}
+      <div className="max-w-6xl mx-auto mt-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Left Side (Image on desktop, middle on mobile) */}
+        <div className="order-2 md:order-1 flex justify-center md:justify-start">
+          <Image
+            src={AboutDH2}
+            alt="HTML image"
+            width={350}
+            height={450}
+            className="object-contain animate-float"
+          />
+        </div>
+
+        {/* Right Side (Text content) */}
+        <div className="order-1 md:order-2 text-center md:text-left space-y-16">
+          {/* Mission */}
+          <div>
+            <p className="text-4xl md:text-6xl font-extralight mb-6">
+              <AnimatedGradientText>Our Mission</AnimatedGradientText>
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto md:mx-0 font-light">
+              To revolutionize <AuroraText>digital</AuroraText> experiences by
+              blending <AuroraText>design</AuroraText> and{' '}
+              <AuroraText>innovation </AuroraText> to create impactful,
+              user-centric solutions that <AuroraText> empower</AuroraText>{' '}
+              businesses and individuals to succeed in the ever-evolving{' '}
+              <AuroraText> digital landscape.</AuroraText>
+            </p>
+          </div>
+
+          {/* Vision */}
+          <div>
+            <p className="text-4xl md:text-6xl font-extralight mb-6">
+              <AnimatedGradientText>Our Vision</AnimatedGradientText>
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto md:mx-0 font-light">
+              To redefine <AuroraText>digital innovation</AuroraText> through
+              the fusion of <AuroraText>creativity</AuroraText> and{' '}
+              <AuroraText>technology</AuroraText> crafting experiences that{' '}
+              <AnimatedGradientText>inspire,</AnimatedGradientText>{' '}
+              <AuroraText>engage, </AuroraText>and{' '}
+              <AnimatedGradientText>endure.</AnimatedGradientText>
+            </p>
+          </div>
         </div>
       </div>
     </section>

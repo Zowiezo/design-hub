@@ -1,14 +1,16 @@
 'use client'
+
 import Head from 'next/head'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
+import Image from 'next/image'
+
 import { Marquee } from '../../components/magicui/marquee'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { Particles } from '../../components/magicui/particles'
 import Logo from '../../assets/images/DH.png'
 import Rocket from '../../assets/images/Rocket.gif'
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
-import Image from 'next/image'
 
 gsap.registerPlugin(MotionPathPlugin)
 
@@ -31,33 +33,45 @@ const Hero = () => {
 
     if (!rocket || !orbit) return
 
-    const width = window.innerWidth
-    const height = window.innerHeight
+    const updatePath = () => {
+      const rect = orbit.getBoundingClientRect()
+      const padding = 50 // distance from edges
+      const width = rect.width
+      const height = rect.height
 
-    const path = [
-      { x: 100, y: 100 },
-      { x: width - 150, y: 50 },
-      { x: width - 100, y: height - 150 },
-      { x: 50, y: height - 100 },
-      { x: 100, y: 100 }, // loop back to start
-    ]
+      const path = [
+        { x: padding, y: padding },
+        { x: width - padding, y: padding / 2 },
+        { x: width - padding / 2, y: height - padding },
+        { x: padding / 2, y: height - padding / 2 },
+        { x: padding, y: padding },
+      ]
 
-    gsap.to(rocket, {
-      duration: 15,
-      repeat: -1,
-      ease: 'power1.inOut',
-      motionPath: {
-        path: path,
-        autoRotate: true,
-        curviness: 1.25,
-      },
-    })
+      gsap.to(rocket, {
+        duration: 15,
+        repeat: -1,
+        ease: 'power1.inOut',
+        motionPath: {
+          path,
+          autoRotate: true,
+          curviness: 1.25,
+        },
+      })
+    }
+
+    updatePath()
+    window.addEventListener('resize', updatePath)
+
+    return () => {
+      window.removeEventListener('resize', updatePath)
+      gsap.killTweensOf(rocket)
+    }
   }, [])
 
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4 mt-[2%]">
+    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col items-center justify-between py-10 px-4">
       <Head>
-        <title>The Design Hub | Where Design Meets Innovation </title>
+        <title>The Design Hub | Where Design Meets Innovation</title>
         <meta
           name="description"
           content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
@@ -89,32 +103,34 @@ const Hero = () => {
       {/* Particle Background */}
       <Particles
         className="absolute top-0 left-0 w-full h-full z-0"
-        color={'#37b7ff'}
+        color="#37b7ff"
         quantity={300}
         ease={80}
         size={0.05}
       />
 
-      {/* Logo + Title in Orbit Container */}
+      {/* Logo + Title Container */}
       <div
-        className="relative flex flex-col items-center gap-3 max-w-[100vw] mt-[5rem] w-[400px] h-[400px]"
         ref={orbitRef}
+        className="relative flex flex-col items-center gap-3 w-full max-w-[400px] h-[400px] mt-[5rem] md:mt-[6rem] lg:mt-[7rem]"
       >
         <Image
           src={Logo}
           alt="The Design Hub Logo"
-          className="h-[10rem] w-[10rem] sm:h-[20rem] sm:w-[20rem] md:h-[20rem] md:w-[20rem] object-contain"
+          width={250}
+          height={250}
+          className="object-contain"
         />
-        <div className="text-center leading-tight break-words">
-          <p className="font-light text-[#37b7ff] mt-[-11%] text-[calc(2rem*1)] md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)]">
+        <div className="text-center">
+          <p className="font-thin text-[#37b7ff] text-[2rem] md:text-[2rem] lg:text-[3rem] xl:text-[3rem]">
             THE DESIGN HUB
           </p>
-          <p className="font-light text-[#b7e3fe] mt-[-10%] text-[calc(2rem*0.5)] md:text-[calc(4rem*0.65)] lg:text-[calc(6rem*0.65)] xl:text-[calc(7rem*0.65)]">
+          <p className="font-thin text-[#b7e3fe] text-[1rem] md:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]">
             MANAGEMENT
           </p>
         </div>
 
-        {/* Rocket orbiting around logo+text */}
+        {/* Rocket orbiting */}
         <Image
           ref={rocketRef}
           src={Rocket}
@@ -126,17 +142,17 @@ const Hero = () => {
       </div>
 
       {/* Main Heading */}
-      <div className="z-10 text-center mt-[-7rem] max-w-[95vw] break-words px-2">
-        <p className="text-[calc(3rem*1)] tracking-tighter md:text-[calc(4rem*1)] lg:text-[calc(6rem*1)] xl:text-[calc(7rem*1)] leading-tight">
-          Where <AuroraText> DESIGN </AuroraText> Meets{' '}
-          <AuroraText> INNOVATION </AuroraText>
+      <div className="z-10 text-center max-w-[95vw] break-words px-2 mt-[8%] md:mt-[12%] lg:mt-[18%] xl:mt-[20%] mb-[5%]">
+        <p className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[5rem] tracking-tighter leading-tight">
+          Where <AuroraText>DESIGN</AuroraText> Meets{' '}
+          <AuroraText>INNOVATION</AuroraText>
         </p>
       </div>
 
       {/* Marquee Rows */}
       <div className="z-10 space-y-[1%] w-full overflow-hidden">
         <Marquee
-          className="opacity-15 text-[calc(1rem+2%)] text-white lowercase"
+          className="opacity-25 text-[calc(1rem+2%)] text-white lowercase"
           reverse
           pauseOnHover
         >
@@ -149,7 +165,7 @@ const Hero = () => {
           <AuroraText>{words.join('  ')}</AuroraText>
         </Marquee>
         <Marquee
-          className="opacity-15 text-[calc(1rem+2%)] text-white lowercase"
+          className="opacity-25 text-[calc(1rem+2%)] text-white lowercase mb-[6%]"
           reverse
           pauseOnHover
         >
@@ -159,8 +175,8 @@ const Hero = () => {
 
       {/* Subheading */}
       <div className="z-10 text-center px-4 max-w-[90vw]">
-        <p className="text-[calc(1.25rem*1.15)] tracking-tighter md:text-[calc(2.25rem*1.15)] lg:text-[calc(4.25rem*1.15)] xl:text-[calc(5.25rem*1.15)] uppercase leading-snug mb-[5rem]">
-          <AuroraText>Design </AuroraText> is our language.{' '}
+        <p className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[5rem] tracking-tighter uppercase leading-snug mb-[5%]">
+          <AuroraText>Design</AuroraText> is our language.{' '}
           <AuroraText>Innovation</AuroraText> is our accent.
         </p>
       </div>

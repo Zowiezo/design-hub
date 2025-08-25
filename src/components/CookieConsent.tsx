@@ -1,4 +1,5 @@
 // src/components/CookieConsent.tsx
+'use client'
 import React, { useEffect, useState } from 'react'
 
 const CookieConsent: React.FC = () => {
@@ -19,21 +20,24 @@ const CookieConsent: React.FC = () => {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-[4rem] left-[4rem] right-[4rem] md:left-[10rem] md:right-[10rem] bg-[#000] border border-gray-300 shadow-lg rounded-md p-[4px] z-[9999] flex flex-col md:flex-row items-center justify-between gap-[4px] font-poppins">
-      <p className="text-sm text-gray-700">
+    <div className="fixed bottom-4 left-4 right-4 md:left-10 md:right-10 bg-black border border-gray-700 shadow-lg rounded-lg p-4 z-[9999] flex flex-col md:flex-row md:items-center md:justify-between gap-4 font-poppins">
+      {/* Text */}
+      <p className="text-sm text-gray-200 text-center md:text-left leading-relaxed">
         This website uses cookies to enhance your experience. By continuing to
         browse, you accept our cookie policy.
       </p>
-      <div className="flex gap-[2rem] pb-[1rem]">
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center">
         <button
           onClick={() => handleConsent(false)}
-          className="px-[3rem] py-[1rem] text-[16px] text-gray-700 border border-[#fff]] rounded hover:bg-[#b7e3fe]"
+          className="px-6 py-2 text-sm md:text-base text-white border border-gray-500 rounded-md hover:bg-gray-800 transition"
         >
           Decline
         </button>
         <button
           onClick={() => handleConsent(true)}
-          className="px-[3rem] py-[1rem] text-[16px] bg-[#093876] text-[#fff] border border-[#093876] rounded hover:bg-[#00294d] space-[4rem]"
+          className="px-6 py-2 text-sm md:text-base bg-[#093876] text-white border border-[#093876] rounded-md hover:bg-[#00294d] transition"
         >
           Accept
         </button>
