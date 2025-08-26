@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden mt-[-5rem]">
+      <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden">
         <Head>
           <title>The Design Hub | Where Design Meets Innovation </title>
           <meta
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           size={0.05}
         />
 
-        <div className="relative z-10 flex flex-col items-center max-w-[1200px] w-full px-4 sm:mt-[15%]">
+        <div className="relative z-10 flex flex-col items-center max-w-[1200px] w-full px-4">
           {/* Main Heading */}
           <p className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] text-center tracking-tighter leading-tight mb-[10%]">
             Driven by{' '}

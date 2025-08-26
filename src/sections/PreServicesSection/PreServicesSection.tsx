@@ -94,27 +94,27 @@ const PreServicesSection = () => {
       </div>
 
       {/* Image + Cards */}
-      <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start gap-8 px-4">
+      <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
         {/* Image left */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center">
           <Image
             src={Social}
             alt="Process Illustration"
             width={400}
             height={400}
-            className="w-[14rem] h-[14rem] md:ml-[15%] sm:w-[20rem] sm:h-[20rem] md:w-[23rem] md:h-[23rem] lg:w-[24rem] lg:h-[24rem] object-contain animate-float"
+            className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] md:w-[23rem] md:h-[23rem] lg:w-[24rem] lg:h-[24rem] object-contain animate-float"
           />
         </div>
 
         {/* Cards right */}
-        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 md:mr-[15%]">
+        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cards.map((card, index) => (
             <Card
               key={index}
               className="p-4 bg-black border-none text-white w-full max-w-xs mx-auto lg:mx-0"
             >
               <motion.div
-                className="flex items-center justify-center w-16 h-16 mb-2 text-[1.75rem] content-center ml-[40%]"
+                className="flex items-center justify-center w-20 h-20 text-[2.5rem] ml-[40%]"
                 variants={iconVariants}
                 initial="initial"
                 animate="animate"
@@ -122,10 +122,10 @@ const PreServicesSection = () => {
                 {card.icon}
               </motion.div>
               <CardHeader>
-                <CardTitle className="text-lg font-light text-center">
+                <CardTitle className="font-light text-center">
                   <SparklesText>{card.title}</SparklesText>
                 </CardTitle>
-                <CardDescription className="mt-1 text-[1rem] font-light leading-snug text-center text-white font-light">
+                <CardDescription className="mt-1 text-[1rem] font-light leading-snug text-center text-white">
                   {card.description}
                 </CardDescription>
               </CardHeader>

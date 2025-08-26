@@ -7,6 +7,7 @@ import CookieConsent from '../CookieConsent'
 import { Particles } from '../../components/magicui/particles'
 import Head from 'next/head'
 import { usePathname } from 'next/navigation'
+import Script from 'next/script'
 
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-4JWFVCZMGC'
@@ -70,11 +71,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta name="theme-color" content="#000000" />
 
         {/* Google Analytics 4 */}
-        <script
+        <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         />
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

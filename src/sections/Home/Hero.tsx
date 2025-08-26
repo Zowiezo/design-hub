@@ -143,7 +143,7 @@ const Hero = () => {
 
       {/* Main Heading */}
       <div className="z-10 text-center max-w-[95vw] break-words px-2 mt-[8%] md:mt-[12%] lg:mt-[18%] xl:mt-[20%] mb-[5%]">
-        <p className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[5rem] tracking-tighter leading-tight">
+        <p className="text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[5rem] tracking-tighter font-thin leading-tight">
           Where <AuroraText>DESIGN</AuroraText> Meets{' '}
           <AuroraText>INNOVATION</AuroraText>
         </p>
@@ -175,9 +175,9 @@ const Hero = () => {
 
       {/* Subheading */}
       <div className="z-10 text-center px-4 max-w-[90vw]">
-        <p className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[5rem] tracking-tighter uppercase leading-snug mb-[5%]">
+        <p className="text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] tracking-tighter uppercase leading-snug mb-[15%] font-thin">
           <AuroraText>Design</AuroraText> is our language.{' '}
-          <AuroraText>Innovation</AuroraText> is our accent.
+          <AuroraText> Innovation</AuroraText> is our accent.
         </p>
       </div>
     </section>

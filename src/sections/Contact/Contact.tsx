@@ -19,7 +19,7 @@ import Linkedin from '../../assets/images/linkedin.png'
 
 const Contact: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-12">
+    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden py-16 px-4">
       <Head>
         <title>The Design Hub | Where Design Meets Innovation</title>
         <meta
@@ -106,81 +106,83 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Centered Form */}
-      <div className="w-full lg:w-[90%] bg-[#111111] p-6 md:p-8 rounded-xl shadow-xl justify-center gap-8 ml-[5%] mr-[10%]">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-center">
-          Have questions or need assistance? <br />
-          <span className="text-[#b7e3fe]">
-            <AnimatedGradientText>We’re Here to Help!</AnimatedGradientText>
-          </span>
-        </h3>
-        <form
-          action="https://formspree.io/f/mpwlzbzl"
-          method="POST"
-          className="space-y-4"
-        >
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              required
-              className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
-            />
-            <input
-              type="text"
-              name="surname"
-              placeholder="Surname"
-              required
-              className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
-            />
-          </div>
-
-          <select
-            name="service"
-            required
-            className="w-full bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+      <div className="relative z-10 flex justify-center items-center w-full min-h-[80vh] px-4">
+        <div className="w-full max-w-2xl bg-[#111111] p-6 md:p-8 rounded-xl shadow-xl flex flex-col gap-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-center">
+            Have questions or need assistance? <br />
+            <span className="text-[#b7e3fe]">
+              <AnimatedGradientText>We’re Here to Help!</AnimatedGradientText>
+            </span>
+          </h3>
+          <form
+            action="https://formspree.io/f/mpwlzbzl"
+            method="POST"
+            className="space-y-4"
           >
-            <option value="">Select a service</option>
-            <option value="UX/UI Design">UX/UI Design</option>
-            <option value="Branding">Branding</option>
-            <option value="Web Development">Web Development</option>
-            <option value="Consulting">Consulting</option>
-            <option value="Other">Other</option>
-          </select>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+              />
+              <input
+                type="text"
+                name="surname"
+                placeholder="Surname"
+                required
+                className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+              />
+            </div>
 
-          <textarea
-            name="message"
-            rows={4}
-            placeholder="Your Message"
-            required
-            className="w-full bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
-          ></textarea>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="flex-1 bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+              />
+            </div>
 
-          <CoolMode>
-            <RainbowButton
-              type="submit"
-              className="w-full py-2 text-white bg-black border border-[#37b7ff] rounded-md focus:ring-2 focus:ring-[#37b7ff]"
+            <select
+              name="service"
+              required
+              className="w-full bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
             >
-              Send Message
-            </RainbowButton>
-          </CoolMode>
-        </form>
+              <option value="">Select a service</option>
+              <option value="UX/UI Design">UX/UI Design</option>
+              <option value="Branding">Branding</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="Your Message"
+              required
+              className="w-full bg-black border border-[#444] rounded-md text-white px-3 py-2 focus:ring-2 focus:ring-[#37b7ff]"
+            ></textarea>
+
+            <CoolMode>
+              <RainbowButton
+                type="submit"
+                className="w-full py-2 text-white bg-black border border-[#37b7ff] rounded-md focus:ring-2 focus:ring-[#37b7ff]"
+              >
+                Send Message
+              </RainbowButton>
+            </CoolMode>
+          </form>
+        </div>
       </div>
 
       {/* Social Links at Bottom */}
