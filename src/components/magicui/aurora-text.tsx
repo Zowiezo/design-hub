@@ -1,29 +1,36 @@
-"use client";
+'use client'
 
-import React, { memo } from "react";
+import React, { memo } from 'react'
 
 interface AuroraTextProps {
-  children: React.ReactNode;
-  className?: string;
-  colors?: string[];
-  speed?: number;
+  children: React.ReactNode
+  className?: string
+  colors?: string[]
+  speed?: number
 }
 
 export const AuroraText = memo(
   ({
     children,
-    className = "",
-    colors = ["#FF0080", "#7928CA", "#0070F3", "#38bdf8"],
+    className = '',
+    // Brighter, neon-like colors for contrast against black
+    colors = ['#FF1B8D', '#9D4EDD', '#00CFFF', '#4DFF91'],
     speed = 1,
   }: AuroraTextProps) => {
     const gradientStyle = {
-      backgroundImage: `linear-gradient(135deg, ${colors.join(", ")}, ${
+      backgroundImage: `linear-gradient(135deg, ${colors.join(', ')}, ${
         colors[0]
       })`,
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
       animationDuration: `${10 / speed}s`,
-    };
+      // Add glow for readability on dark backgrounds
+      // textShadow: `
+      //   0 0 6px rgba(255, 255, 255, 0.6),
+      //   0 0 12px rgba(0, 200, 255, 0.6),
+      //   0 0 18px rgba(255, 0, 149, 0.67)
+      // `,
+    }
 
     return (
       <span className={`relative inline-block ${className}`}>
@@ -36,8 +43,8 @@ export const AuroraText = memo(
           {children}
         </span>
       </span>
-    );
+    )
   },
-);
+)
 
-AuroraText.displayName = "AuroraText";
+AuroraText.displayName = 'AuroraText'

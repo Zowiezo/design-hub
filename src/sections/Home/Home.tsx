@@ -98,7 +98,7 @@ const Home: React.FC = () => {
 
           {/* Highlight Text */}
           <AnimatedGradientText
-            className="text-[1.25rem] md:text-[1.5rem] tracking-tight mt-8 text-center"
+            className="text-[1.25rem] md:text-[1.5rem] tracking-tight mt-8 text-center font-light"
             speed={2}
           >
             Our approach is a perfect blend of creativity and functionality.

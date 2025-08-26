@@ -125,7 +125,7 @@ const PreServicesSection = () => {
                 <CardTitle className="text-lg font-light text-center">
                   <SparklesText>{card.title}</SparklesText>
                 </CardTitle>
-                <CardDescription className="mt-1 text-[1rem] font-light leading-snug text-center font-[#fff] font-light">
+                <CardDescription className="mt-1 text-[1rem] font-light leading-snug text-center text-white font-light">
                   {card.description}
                 </CardDescription>
               </CardHeader>

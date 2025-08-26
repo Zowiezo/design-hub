@@ -152,7 +152,7 @@ const Hero = () => {
       {/* Marquee Rows */}
       <div className="z-10 space-y-[1%] w-full overflow-hidden">
         <Marquee
-          className="opacity-25 text-[calc(1rem+2%)] text-white lowercase"
+          className="opacity-50 text-[calc(1rem+2%)] text-white lowercase"
           reverse
           pauseOnHover
         >
@@ -165,7 +165,7 @@ const Hero = () => {
           <AuroraText>{words.join('  ')}</AuroraText>
         </Marquee>
         <Marquee
-          className="opacity-25 text-[calc(1rem+2%)] text-white lowercase mb-[6%]"
+          className="opacity-50 text-[calc(1rem+2%)] text-white lowercase mb-[6%]"
           reverse
           pauseOnHover
         >

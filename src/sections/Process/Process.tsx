@@ -115,8 +115,8 @@ const Process = () => {
         <p className="text-3xl md:text-5xl font-light tracking-tight mb-6">
           Our Process
         </p>
-        <p className="text-lg text-gray-400">
-          <AuroraText>
+        <p className="text-lg md:text-xl font-light">
+          <AuroraText className="drop-shadow-lg">
             From idea to execution — we follow a clear, collaborative process
             that ensures every project is delivered with purpose and polish.
           </AuroraText>
@@ -148,13 +148,14 @@ const Process = () => {
                   className="object-contain animate-fade-in animate-orbit"
                 />
               </div>
+
               {/* Title */}
               <p className="text-2xl font-semibold uppercase tracking-wide">
                 <AnimatedGradientText>{step.title}</AnimatedGradientText>
               </p>
 
               {/* Description */}
-              <div className="text-gray-300 leading-relaxed text-base">
+              <div className="space-y-6 text-gray-200 text-left text-lg leading-relaxed font-light drop-shadow-md">
                 {step.description.split('\n').map((line, idx) => (
                   <p key={idx} className="mb-2">
                     {line}
@@ -162,21 +163,24 @@ const Process = () => {
                 ))}
               </div>
 
-              {/* Arrow */}
-              <div className="mt-4">
-                <img
+              {/* Arrow button */}
+              <div className="mt-6">
+                <button
                   onClick={goToNext}
-                  src="/assets/images/arrow.png"
                   aria-label="Next step"
-                  className="w-16 h-16 object-contain animate-fade-in cursor-pointer"
-                />
+                  className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 p-[2px] hover:scale-110 transition-transform"
+                >
+                  <div className="w-full h-full flex items-center justify-center rounded-full bg-black">
+                    <span className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+                      &gt;
+                    </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      <div className="h-32" />
     </section>
   )
 }

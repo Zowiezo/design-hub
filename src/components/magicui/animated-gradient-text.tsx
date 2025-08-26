@@ -12,8 +12,8 @@ export function AnimatedGradientText({
   children,
   className,
   speed = 1,
-  colorFrom = '#ffaa40',
-  colorTo = '#9c40ff',
+  colorFrom = '#FF1B8D', // brighter neon pink
+  colorTo = '#00CFFF', // bright cyan
   ...props
 }: AnimatedGradientTextProps) {
   return (
@@ -23,6 +23,11 @@ export function AnimatedGradientText({
           '--bg-size': `${speed * 300}%`,
           '--color-from': colorFrom,
           '--color-to': colorTo,
+          // textShadow: `
+          //   0 0 6px rgba(255, 255, 255, 0.6),
+          //   0 0 12px rgba(0, 200, 255, 0.6),
+          //   0 0 18px rgba(255, 0, 150, 0.4)
+          // `,
         } as React.CSSProperties
       }
       className={cn(

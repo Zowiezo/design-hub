@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <HeroNavbar
-      className="fixed top-0 w-full z-50 bg-black py-[5px] text-sm justify-between px-6"
+      className="fixed top-[0%] w-full z-50 bg-black py-[5px] text-sm justify-between px-[6px] pt-[env(safe-area-inset-top,0px)] font-light"
       isBordered
     >
       {/* Left: Logo */}
