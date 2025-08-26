@@ -16,7 +16,7 @@ const CookiesPolicy = () => {
           Terms of Service
         </p>
         <p className="text-sm text-gray-500 text-center mb-12">
-          Last updated: July 16, 2025
+          Last updated: 16 July 2025
         </p>
 
         {/* Sections */}
