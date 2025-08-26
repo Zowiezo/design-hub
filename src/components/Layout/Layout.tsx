@@ -8,18 +8,23 @@ import { Particles } from '../../components/magicui/particles'
 import Head from 'next/head'
 import { usePathname } from 'next/navigation'
 
-// Extend the Window interface for gtag
+// Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'G-4JWFVCZMGC'
+
+// Type-safe gtag declaration
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void
+    gtag?: (
+      command: 'config' | 'event' | 'set',
+      targetId: string,
+      config?: Record<string, unknown>,
+    ) => void
   }
 }
 
 type LayoutProps = {
   children?: React.ReactNode
 }
-
-const GA_MEASUREMENT_ID = 'G-4JWFVCZMGC'
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname()
@@ -42,6 +47,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="author" content="The Design Hub Management" />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -66,7 +73,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        ></script>
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -82,11 +89,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar />
 
       <main className="relative flex-grow z-10 overflow-hidden font-light">
-        {/* Scoped Particles */}
+        {/* Particles background */}
         <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
           <Particles
             className="w-full h-full"
-            color={'#37b7ff'}
+            color="#37b7ff"
             quantity={300}
             ease={80}
             size={0.05}
@@ -96,7 +103,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Cookie Consent */}
         <CookieConsent />
 
-        {/* Page Content */}
+        {/* Page content */}
         <div className="relative z-10">{children}</div>
       </main>
 
