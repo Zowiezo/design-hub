@@ -17,34 +17,54 @@ const Home: React.FC = () => {
       <Hero />
       <section className="relative flex items-center justify-center min-h-screen text-white bg-black overflow-hidden">
         <Head>
-          <title>The Design Hub | Where Design Meets Innovation </title>
+          <title>
+            The Design Hub Management | Where Design Meets Innovation
+          </title>
           <meta
             name="description"
-            content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+            content="The Design Hub Management is a Black female-owned design and tech company based in South Africa. We specialize in UI/UX design, branding, and web development, delivering timeless and innovative digital experiences."
           />
           <meta
             name="keywords"
-            content="The Design Hub, The Design Hub Management, TDHM, Business Start Up, UI/UX Design, Web Development, Digital Marketing, Branding, Tech Agency South Africa, Creative Studio, Black-owned, Female-owned"
+            content="The Design Hub Management, UI/UX Design, Branding, Web Development, Digital Strategy, Tech Company, South Africa, Black Female Owned"
           />
+          <meta name="author" content="The Design Hub Management" />
+
+          {/* Open Graph */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.thedesignhub.co.za/" />
           <meta
             property="og:title"
-            content="The Design Hub | Where Design Meets Innovation"
+            content="The Design Hub Management | Where Design Meets Innovation"
           />
           <meta
             property="og:description"
-            content="Discover our services in design, branding, UX/UI, and more."
+            content="A Black female-owned design and tech company delivering UI/UX, branding, and web development services in South Africa."
           />
-          <meta property="og:image" content="/og-image.png" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://thedesignhub.co.za" />
+          <meta
+            property="og:image"
+            content="https://www.thedesignhub.co.za/og-image.png"
+          />
+
+          {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="The Design Hub" />
+          <meta name="twitter:url" content="https://www.thedesignhub.co.za/" />
+          <meta
+            name="twitter:title"
+            content="The Design Hub Management | Where Design Meets Innovation"
+          />
           <meta
             name="twitter:description"
-            content="Creative, innovative design and development agency."
+            content="Where creativity meets technology — discover UI/UX design, branding, and web development services with The Design Hub Management."
           />
-          <meta name="twitter:image" content="/og-image.png" />
+          <meta
+            name="twitter:image"
+            content="https://www.thedesignhub.co.za/og-image.png"
+          />
+
+          <link rel="icon" href="/favicon.ico" />
         </Head>
+
         {/* Particles */}
         <Particles
           className="absolute top-0 left-0 w-full h-full z-0"

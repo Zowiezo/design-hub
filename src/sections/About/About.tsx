@@ -13,11 +13,62 @@ const About = () => {
   return (
     <section className="bg-black text-[#fff] px-6 py-20 md:px-24 font-Poppins">
       <Head>
-        <title>The Design Hub | Who We Are</title>
+        {/* Page Title */}
+        <title>The Design Hub Management | Who We Are</title>
+
+        {/* Meta Description */}
         <meta
           name="description"
-          content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+          content="Discover The Design Hub Management — a Black female-owned design and tech company in South Africa. We merge creativity and innovation to craft UI/UX, branding, and web development solutions that inspire."
         />
+
+        {/* Keywords */}
+        <meta
+          name="keywords"
+          content="The Design Hub Management, About Us, Our Story, UI/UX Design, Brand Design, Web Development, Tech Company, Black Female Owned, Digital Innovation, South Africa"
+        />
+        <meta name="author" content="The Design Hub Management" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.thedesignhub.co.za/about"
+        />
+        <meta
+          property="og:title"
+          content="The Design Hub Management | Who We Are"
+        />
+        <meta
+          property="og:description"
+          content="Learn more about The Design Hub Management, a Black female-owned design and tech company blending creativity, innovation, and technology in South Africa."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://www.thedesignhub.co.za/about"
+        />
+        <meta
+          name="twitter:title"
+          content="The Design Hub Management | Who We Are"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover The Design Hub Management — a Black female-owned design and tech company in South Africa specializing in UI/UX, branding, and web development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Particles */}

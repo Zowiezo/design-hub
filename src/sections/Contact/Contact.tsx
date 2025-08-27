@@ -21,11 +21,56 @@ const Contact: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen bg-black text-white overflow-hidden py-16 px-4">
       <Head>
-        <title>The Design Hub | Where Design Meets Innovation</title>
+        <title>Contact The Design Hub Management | Let's Work Together</title>
         <meta
           name="description"
-          content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+          content="Get in touch with The Design Hub Management. Whether you need UI/UX design, branding, or web development — we’re here to bring your ideas to life."
         />
+        <meta
+          name="keywords"
+          content="The Design Hub Management Contact, Get in Touch, Work With Us, UI/UX Design, Branding, Web Development, South Africa, Black Female Owned"
+        />
+        <meta name="author" content="The Design Hub Management" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.thedesignhub.co.za/contact"
+        />
+        <meta
+          property="og:title"
+          content="Contact The Design Hub Management | Let's Work Together"
+        />
+        <meta
+          property="og:description"
+          content="Connect with The Design Hub Management today. We specialize in UI/UX, branding, and web development solutions designed to inspire."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://www.thedesignhub.co.za/contact"
+        />
+        <meta
+          name="twitter:title"
+          content="Contact The Design Hub Management | Let's Work Together"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch with The Design Hub Management. We’re ready to collaborate on your next digital project."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Particles

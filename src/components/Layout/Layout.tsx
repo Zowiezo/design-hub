@@ -40,16 +40,54 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col font-poppins min-h-screen">
       <Head>
-        <title>The Design Hub Mgt</title>
+        {/* Default SEO */}
+        <title>The Design Hub Management | Where Design Meets Innovation</title>
         <meta
           name="description"
-          content="Design meets innovation at The Design Hub."
+          content="The Design Hub Management is a Black female-owned design and tech company based in South Africa. We specialize in UI/UX design, branding, and web development, delivering timeless and innovative digital experiences."
         />
+        <meta
+          name="keywords"
+          content="The Design Hub Management, UI/UX Design, Brand Design, Web Development, Digital Strategy, South Africa, Black Female Owned"
+        />
+        <meta name="author" content="The Design Hub Management" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta name="author" content="The Design Hub Management" />
+        <meta name="theme-color" content="#37b7ff" />
 
-        {/* Favicon */}
+        {/* Open Graph (Default) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.thedesignhub.co.za" />
+        <meta
+          property="og:title"
+          content="The Design Hub Management | Where Design Meets Innovation"
+        />
+        <meta
+          property="og:description"
+          content="We are a Black female-owned design and tech company in South Africa, crafting UI/UX, branding, and web development solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Twitter (Default) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.thedesignhub.co.za" />
+        <meta
+          name="twitter:title"
+          content="The Design Hub Management | Where Design Meets Innovation"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover The Design Hub Management — a Black female-owned design and tech company specializing in UI/UX, branding, and web development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -68,7 +106,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="theme-color" content="#000000" />
 
         {/* Google Analytics 4 */}
         <Script
@@ -76,6 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         />
         <Script
+          id="ga-init"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

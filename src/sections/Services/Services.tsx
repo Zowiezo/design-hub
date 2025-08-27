@@ -19,15 +19,56 @@ const Services = () => {
       id="our-services"
     >
       <Head>
-        <title>The Design Hub | Our Services</title>
+        <title>Our Services | The Design Hub Management</title>
         <meta
           name="description"
-          content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+          content="Explore our services — from UI/UX design and branding to web development and digital strategy. The Design Hub Management delivers creative and innovative solutions."
         />
         <meta
           name="keywords"
-          content="The Design Hub, TDHM, UI/UX Design, Web Development, Digital Marketing, Branding, Creative Studio, South Africa"
+          content="Design Hub Management Services, UI/UX Design, Branding, Web Development, Digital Strategy, Tech Solutions, South Africa"
         />
+        <meta name="author" content="The Design Hub Management" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.thedesignhub.co.za/services"
+        />
+        <meta
+          property="og:title"
+          content="Our Services | The Design Hub Management"
+        />
+        <meta
+          property="og:description"
+          content="UI/UX design, branding, web development, and digital strategy — discover how The Design Hub Management transforms ideas into powerful digital experiences."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://www.thedesignhub.co.za/services"
+        />
+        <meta
+          name="twitter:title"
+          content="Our Services | The Design Hub Management"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore our creative services in UI/UX, branding, and web development. The Design Hub Management brings innovation and design together."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Particles Background */}

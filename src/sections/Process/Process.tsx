@@ -95,11 +95,56 @@ const Process = () => {
       id="our-process"
     >
       <Head>
-        <title>The Design Hub | Our Process </title>
+        <title>Our Process | The Design Hub Management</title>
         <meta
           name="description"
-          content="We blend creativity and technology to deliver stunning design, branding, and web development solutions."
+          content="At The Design Hub Management, we believe in a seamless creative process — from discovery and strategy to design and development."
         />
+        <meta
+          name="keywords"
+          content="The Design Hub Management Process, Creative Workflow, Design Process, UI/UX Strategy, Branding Process, South Africa"
+        />
+        <meta name="author" content="The Design Hub Management" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.thedesignhub.co.za/process"
+        />
+        <meta
+          property="og:title"
+          content="Our Process | The Design Hub Management"
+        />
+        <meta
+          property="og:description"
+          content="Discover how The Design Hub Management approaches each project — a process built on strategy, creativity, and innovation."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://www.thedesignhub.co.za/process"
+        />
+        <meta
+          name="twitter:title"
+          content="Our Process | The Design Hub Management"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore our process — from discovery to design to development. The Design Hub Management blends creativity with technology to deliver impact."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thedesignhub.co.za/og-image.png"
+        />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Particles
