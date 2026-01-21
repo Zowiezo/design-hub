@@ -1,15 +1,18 @@
-// src/components/CookieConsent.tsx
 'use client'
 import React, { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const CookieConsent: React.FC = () => {
   const [showBanner, setShowBanner] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent')
-    if (!consent) {
-      setShowBanner(true)
-    }
+    // Small delay to ensure the page is loaded and ready
+    const timer = setTimeout(() => {
+      const consent = localStorage.getItem('cookieConsent')
+      if (!consent) setShowBanner(true)
+    }, 1500)
+    return () => clearTimeout(timer)
   }, [])
 
   const handleConsent = (accepted: boolean) => {
@@ -17,32 +20,50 @@ const CookieConsent: React.FC = () => {
     setShowBanner(false)
   }
 
-  if (!showBanner) return null
-
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-10 md:right-10 bg-black border border-gray-700 shadow-lg rounded-lg p-4 z-[9999] flex flex-col md:flex-row md:items-center md:justify-between gap-4 font-poppins">
-      {/* Text */}
-      <p className="text-sm text-gray-200 text-center md:text-left leading-relaxed">
-        This website uses cookies to enhance your experience. By continuing to
-        browse, you accept our cookie policy.
-      </p>
+    <AnimatePresence>
+      {showBanner && (
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl rounded-[2rem] p-6 z-[9999] flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          {/* Content */}
+          <div className="flex-1 space-y-1">
+            <h4 className="text-white text-sm font-medium tracking-wide">
+              Cookie Preferences
+            </h4>
+            <p className="text-xs text-gray-400 font-light leading-relaxed">
+              We use cookies to optimize your experience at The Hub. See our{' '}
+              <Link
+                href="/privacy"
+                className="text-[#37b7ff] underline underline-offset-2"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+          </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center">
-        <button
-          onClick={() => handleConsent(false)}
-          className="px-6 py-2 text-sm md:text-base text-white border border-gray-500 rounded-md hover:bg-gray-800 transition"
-        >
-          Decline
-        </button>
-        <button
-          onClick={() => handleConsent(true)}
-          className="px-6 py-2 text-sm md:text-base bg-[#093876] text-white border border-[#093876] rounded-md hover:bg-[#00294d] transition"
-        >
-          Accept
-        </button>
-      </div>
-    </div>
+          {/* Actions */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <button
+              onClick={() => handleConsent(false)}
+              className="flex-1 md:flex-none px-5 py-2.5 text-xs text-gray-400 border border-white/10 rounded-full hover:bg-white/5 transition-all"
+            >
+              Decline
+            </button>
+            <button
+              onClick={() => handleConsent(true)}
+              className="flex-1 md:flex-none px-6 py-2.5 text-xs bg-[#37b7ff] text-black font-semibold rounded-full hover:bg-[#b7e3fe] transition-all shadow-[0_0_20px_rgba(55,183,255,0.3)]"
+            >
+              Accept All
+            </button>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
