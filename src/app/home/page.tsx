@@ -6,14 +6,11 @@ import Link from 'next/link'
 import { RainbowButton } from '../../components/magicui/rainbow-button'
 import { CoolMode } from '../../components/magicui/cool-mode'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
-import Hero from '../hero/page'
 import Web from '../../assets/images/online-marketing.png'
 
 const Home: React.FC = () => {
   return (
     <>
-      <Hero />
-
       {/* About / Purpose Section */}
       <section className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden">
         <div className="relative z-10 flex flex-col items-center max-w-7xl w-full px-6">
