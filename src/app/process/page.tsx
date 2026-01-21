@@ -1,6 +1,5 @@
 'use client'
 
-import { useRef } from 'react'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { useKeenSlider } from 'keen-slider/react'

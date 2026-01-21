@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { servicesData } from '../../data/servicesData'
 import { AuroraText } from '../../components/magicui/aurora-text'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
-import { SparklesText } from '../../components/magicui/sparkles-text'
 import Image from 'next/image'
 
 const Services = () => {

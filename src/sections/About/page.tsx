@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { AnimatedGradientText } from '../../components/magicui/animated-gradient-text'
 import { AuroraText } from '../../components/magicui/aurora-text'
 
-import AboutDH from '../'
+import AboutDH from '../../assets/images/DH.png'
 import AboutDH2 from '../../assets/images/htmlWeb.png'
 
 const About = () => {
