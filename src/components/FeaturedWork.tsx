@@ -105,7 +105,7 @@ const Work = () => {
                     </div>
                   ) : (
                     <div className="mt-10 mb-8 h-12 flex items-center">
-                      <Image src={project.logo || ''} alt={project.name} width={45} height={45} className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100 font-light" />
+                      <Image src={project.logo || ''} alt={project.name} width={45} height={45} className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100" />
                     </div>
                   )}
 

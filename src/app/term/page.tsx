@@ -78,6 +78,8 @@ const TermsOfService = () => {
             </p>
             <a
               href="mailto:hello@thedesignhub.co.za"
+              target="_blank"
+    rel="noopener noreferrer"
               className="inline-block text-[#37b7ff] font-medium border border-[#37b7ff]/30 px-8 py-3 rounded-full hover:bg-[#37b7ff] hover:text-black transition-all duration-300"
             >
               Contact Legal Desk

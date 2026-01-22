@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false, // ⬅️ disable for dev speed
   trailingSlash: false,
+
+  eslint: {
+    ignoreDuringBuilds: true, // ⬅️ lint separately
+  },
+
   images: {
-    unoptimized: true, // optional if using local images
+    unoptimized: true,
   },
 }
 

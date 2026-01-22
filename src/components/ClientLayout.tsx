@@ -63,9 +63,9 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({
           <Particles
             className="w-full h-full opacity-40"
             color="#37b7ff"
-            quantity={120}
+            quantity={550}
             ease={80}
-            size={0.05}
+            size={0.07}
             staticity={50}
           />
         </div>
