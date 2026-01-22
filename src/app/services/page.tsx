@@ -18,7 +18,7 @@ const Services = () => {
       {/* Background Decorative Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#37b7ff]/5 blur-[120px] rounded-full pointer-events-none opacity-20" />
 
-      {/* Heading - Montserrat Thin */}
+      {/* Heading */}
       <div className="relative z-10 text-center max-w-4xl mx-auto mb-24">
         <h2 className="font-montserrat text-4xl md:text-7xl font-thin tracking-tighter mb-8 uppercase">
           Studio <AuroraText>Services</AuroraText>
@@ -45,7 +45,7 @@ const Services = () => {
               key={index}
               layout
               onClick={() => setActiveService(isActive ? null : index)}
-              className={`relative h-[420px] rounded-[3rem] cursor-pointer transition-all duration-700 border ${
+              className={`relative h-[450px] rounded-[3rem] cursor-pointer transition-all duration-700 border ${
                 isActive
                   ? 'border-[#37b7ff]/50 bg-white/[0.03]'
                   : 'border-white/5 bg-white/[0.01] hover:bg-white/[0.04] hover:border-white/10'
@@ -68,7 +68,7 @@ const Services = () => {
                         alt={service.title}
                         width={70}
                         height={70}
-                        className="object-contain animate-float grayscale group-hover:grayscale-0 transition-all"
+                        className="object-contain animate-float group-hover:grayscale-0 transition-all"
                       />
                     </div>
                     <h3 className="font-montserrat text-xl font-thin tracking-[0.2em] mb-4 uppercase">
@@ -89,25 +89,35 @@ const Services = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="h-full p-12 flex flex-col justify-between"
+                    className="h-full p-10 md:p-12 flex flex-col justify-between"
                   >
                     <div>
-                      <div className="flex justify-between items-start mb-8">
-                        <h3 className="font-montserrat text-xl font-thin tracking-widest text-[#37b7ff] uppercase">
-                          <AnimatedGradientText className="inline">
-                            {service.title}
-                          </AnimatedGradientText>
-                        </h3>
+                      <div className="flex justify-between items-start mb-6">
+                        <div className="flex flex-col gap-2">
+                           <h3 className="font-montserrat text-xl font-thin tracking-widest text-[#37b7ff] uppercase">
+                            <AnimatedGradientText className="inline text-left m-0 p-0 bg-transparent border-none">
+                              {service.title}
+                            </AnimatedGradientText>
+                          </h3>
+                          {service.partner && (
+                            <div className="flex items-center gap-2">
+                              <span className="w-2 h-2 rounded-full bg-[#37b7ff] animate-pulse" />
+                              <span className="font-poppins text-[8px] uppercase tracking-[0.2em] text-white/60">
+                                Powered by {service.partner}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         <button className="text-white/20 hover:text-white transition-colors text-sm font-light">
                           CLOSE ✕
                         </button>
                       </div>
 
-                      <div className="space-y-5">
+                      <div className="space-y-4">
                         {service.details.map((item, i) => (
-                          <div key={i} className="flex items-start gap-4 group">
+                          <div key={i} className="flex items-start gap-3 group">
                             <span className="text-[#37b7ff] mt-2 w-1.5 h-[1px] bg-[#37b7ff] shrink-0" />
-                            <p className="font-poppins text-gray-400 font-light leading-relaxed text-sm group-hover:text-white transition-colors">
+                            <p className="font-poppins text-gray-400 font-light leading-relaxed text-[13px] group-hover:text-white transition-colors">
                               {item}
                             </p>
                           </div>
@@ -115,10 +125,15 @@ const Services = () => {
                       </div>
                     </div>
 
-                    <div className="pt-8 border-t border-white/5">
+                    <div className="pt-6 border-t border-white/5 flex justify-between items-center">
                       <p className="font-poppins text-[9px] uppercase tracking-[0.4em] text-gray-600 font-medium">
                         Service Class / 00{index + 1}
                       </p>
+                      {service.partner && (
+                         <div className="font-montserrat text-[8px] font-bold tracking-tighter text-white opacity-40">
+                            MEDIA<span className="text-[#37b7ff]">.CNR</span>
+                         </div>
+                      )}
                     </div>
                   </motion.div>
                 )}

@@ -9,7 +9,6 @@ export const servicesData = [
       'Scalable design systems & style guides',
       'Asset sourcing & performance optimization',
       'Mobile-first responsive environments',
-      'Strategic content & narrative guidance',
     ],
   },
   {
@@ -21,7 +20,6 @@ export const servicesData = [
       'Multi-channel social branding kits',
       'Logo architecture & custom typography',
       'Brand discovery & strategic positioning',
-      'Color theory & cinematic mood boards',
       'Comprehensive Brand Governance (PDF)',
     ],
   },
@@ -31,7 +29,6 @@ export const servicesData = [
     details: [
       'Headless CMS & API integrations',
       'Custom high-performance web apps',
-      'Proprietary admin dashboards',
       'Core Web Vitals & performance tuning',
       'SEO-centric technical architecture',
       'Cloud hosting & secure deployment',
@@ -39,15 +36,16 @@ export const servicesData = [
     ],
   },
   {
-    title: 'Digital Growth Strategy',
+    title: 'Growth Architecture', // Renamed for more "Lab" feel
     image: '/assets/images/services/marketing.svg',
+    partner: 'Media.CNR',
     details: [
+      'Surgical SEO infrastructure',
       'Growth-centric content frameworks',
-      'Social ecosystem strategy',
-      'Automated email lifecycle setup',
-      'Targeted acquisition (Meta & Google)',
+      'Data-driven acquisition (Meta & Google)',
       'Advanced analytics & behavior tracking',
-      'Strategic content roadmaps',
+      'Automated email lifecycle setup',
+      'Performance-led marketing strategy',
     ],
   },
   {

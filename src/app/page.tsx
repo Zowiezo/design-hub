@@ -5,6 +5,7 @@ import Hero from './hero/page'
 import Home from './home/page'
 import PreServicesSection from './preservicessection/page'
 import Work from '@/components/Work'
+import PartnersSection from '@/components/Partner'
 import JoinLabCTA from '@/components/JoinLabCTA'
 import Contact from './contact/page'
 
@@ -22,6 +23,8 @@ export default function HomePage() {
 
       {/* 4. The Portfolio: The Incubation Lab Grid */}
       <Work />
+
+      <PartnersSection />
 
       {/* 5. The Pitch: Why join the Lab? */}
       <JoinLabCTA />

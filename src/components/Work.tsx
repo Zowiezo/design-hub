@@ -24,7 +24,7 @@ const projects: Project[] = [
     type: 'Full-Stack / Brand / App',
     status: 'Flagship Project',
     logo: '/assets/images/logos/triplii.png',
-    url: 'https://triplii-frontend.vercel.app/',
+    url: 'https://triplii.co.za/',
     color: 'from-blue-500/50',
     description:
       'Engineering a cross-platform digital ecosystem. From mobile-first UI architecture to scalable backend deployment, Triplii represents our flagship full-stack capability.',
