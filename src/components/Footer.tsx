@@ -40,20 +40,31 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Contact Peek */}
-          <div className="space-y-6">
-  <h3 className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">Location</h3>
-  <p className="text-gray-300 font-light leading-relaxed">Based in Johannesburg, South Africa<br />Serving Globally</p>
-  
-  <a 
-    href="mailto:hello@thedesignhub.co.za" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block text-[#37b7ff] border-b border-[#37b7ff]/30 pb-1 hover:border-[#37b7ff] transition-all cursor-pointer"
-  >
-    hello@thedesignhub.co.za
-  </a>
+         {/* Contact Peek */}
+<div className="relative z-20 pointer-events-auto space-y-6">
+  <h3 className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">
+    Location
+  </h3>
+
+  <p className="text-gray-300 font-light leading-relaxed">
+    Based in Johannesburg, South Africa<br />
+    Serving Globally
+  </p>
+
+  <a
+  href="mailto:hello@thedesignhub.co.za"
+  onClick={(e) => {
+    // This prevents the click from triggering parent animations/links
+    e.stopPropagation(); 
+  }}
+  target="_blank" // Helps some browsers treat it as a new intent
+  rel="noopener noreferrer"
+  className="inline-block text-[#37b7ff] border-b border-[#37b7ff]/20 pb-1 hover:border-[#37b7ff] transition-all cursor-pointer font-medium"
+>
+  hello@thedesignhub.co.za
+</a>
 </div>
+
         </div>
 
         {/* Bottom Footer */}
