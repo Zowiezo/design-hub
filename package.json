@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@heroui/autocomplete": "^2.3.18",
     "@heroui/card": "^2.2.22",

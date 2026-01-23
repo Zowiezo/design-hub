@@ -3,7 +3,6 @@ import { Montserrat, Livvic, Poppins } from "next/font/google";
 import "../style/global.css"
 import ClientLayout from "@/components/ClientLayout";
 
-// Configuration for Montserrat (Your Heading Font)
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
@@ -11,7 +10,6 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-// Configuration for Poppins (Your Body/Prose Font)
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
@@ -19,7 +17,6 @@ const poppins = Poppins({
   display: 'swap',
 })
 
-// Configuration for Livvic
 const livvic = Livvic({
   subsets: ['latin'],
   variable: '--font-livvic',
@@ -29,11 +26,18 @@ const livvic = Livvic({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.thedesignhub.co.za'),
+  // 1. Added Author and Date Metadata
+  authors: [{ name: "Zoleka Zowie Kubheka", url: "https://www.thedesignhub.co.za" }],
+  other: {
+    "publish-date": "2025-07-16", // Your effective date
+  },
   title: {
     default: "The Design Hub | Strategy • Identity • Code",   
     template: "%s | The Design Hub Management"
   },
-  description: "A premium Creative Tech Studio curating digital excellence through strategic identity and engineered solutions. From inception to launch, we bring your vision to life.",  keywords: [
+  // 2. Expanded Description (170+ Characters for better SEO)
+  description: "The Design Hub Management is a premium Creative Tech Studio and Incubation Lab engineering digital legacies. We bridge the gap between imagination and execution through Strategic Identity and Engineered Excellence for global brands.",
+  keywords: [
     "The Design Hub Management",
     "Incubation Hub Johannesburg", 
     "Creative Tech Studio Johannesburg",
@@ -54,18 +58,18 @@ export const metadata: Metadata = {
     url: "https://www.thedesignhub.co.za",
     siteName: "The Design Hub Management",
     title: "The Design Hub | Strategy • Identity • Code",
-    description: "Curating Digital Excellence. Bringing Vision to Life through premium design and engineering.",
+    description: "Engineering Digital Legacies. Bringing Vision to Life through premium design, strategic identity, and technical excellence.",
     images: [{ 
       url: "/og-image.png", 
       width: 1200, 
       height: 630, 
-      alt: "The Design Hub Management - Strategy • Identity • Code" 
+      alt: "The Design Hub Management - Strategic Identity. Engineered Excellence." 
     }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Design Hub | Strategy • Identity • Code",
-    description: "A Creative Tech Studio specializing in Branding, Engineering, and Consulting.",
+    description: "A Creative Tech Studio specializing in Branding, Engineering, and Growth Consulting.",
     images: ["/og-image.png"],
   },
 };
@@ -88,7 +92,7 @@ export default function RootLayout({
               "alternateName": "The Incubation Hub",
               "url": "https://www.thedesignhub.co.za",
               "logo": "https://www.thedesignhub.co.za/logo.png", 
-              "description": "Where Design Meets Innovation. A premium creative tech studio and incubation hub.",
+              "description": "Strategic Identity. Engineered Excellence. A premium creative tech studio and incubation lab specializing in digital legacy architecting.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Johannesburg",
@@ -98,13 +102,14 @@ export default function RootLayout({
               "founder": {
                 "@type": "Person",
                 "name": "Zoleka Zowie Kubheka"
-              }
+              },
+              "foundingDate": "2025"
             })
           }}
         />
       </head>
-<body className={`${montserrat.variable} ${livvic.variable} ${poppins.variable} font-sans antialiased`}>        
-  <ClientLayout>
+      <body className={`${montserrat.variable} ${livvic.variable} ${poppins.variable} font-sans antialiased`}>        
+        <ClientLayout>
           {children}
         </ClientLayout>
       </body>
